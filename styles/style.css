@@ -40,16 +40,21 @@ body {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 #left-panel{
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
 }
 
 .panel-button {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .button-selected-year{

@@ -51,6 +51,8 @@ function onPlayerStateChange(event) {
         } else {
             console.log("FULLSCREEN ERROR");
         }
+
+        HideLeftPanel();
     }
 }
 function stopVideo() {
@@ -97,4 +99,12 @@ function UpdateYearButtons(year) {
             elem.classList.remove("button-selected-year");
         }
     }
+}
+
+function HideLeftPanel() {
+    document.getElementById("left-panel").classList.add("hidden");
+}
+
+function ShowLeftPanel() {
+    document.getElementById("left-panel").classList.remove("hidden");
 }
