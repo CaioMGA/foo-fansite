@@ -13,6 +13,12 @@ body {
     width:100vw;
     background-color: blanchedalmond;
     animation-duration: 1s;
+
+    /* Background */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    backdrop-filter: blur(0.3rem);
 }
 
 #player {
@@ -37,10 +43,18 @@ body {
     visibility: hidden;
 }
 
-.year-2018{
-    background-image: url("imgs/2023-road.jpeg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100%;
-    backdrop-filter: blur(0.3rem);
+#left-panel{
+    position: relative;
+}
+
+.panel-button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.button-selected-year{
+    font-size: x-large;
+    pointer-events: none;
+    cursor: pointer;
+
 }

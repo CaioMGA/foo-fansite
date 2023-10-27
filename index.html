@@ -1,76 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head><link rel="stylesheet" type="text/css" href="style.css"/></head>
-  <body class="year-2018">
-    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player" class="player-small"></div>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/2018.css">
+    <link rel="stylesheet" type="text/css" href="styles/2019.css">
+    <link rel="stylesheet" type="text/css" href="styles/2021.css">
+    <link rel="stylesheet" type="text/css" href="styles/2022.css">
+    <link rel="stylesheet" type="text/css" href="styles/2023.css">
 
-    <script>
-      var playerControls;
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          videoId: '',
-          playerVars: {'controls': 0},
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange,
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        playerControls = event.target;
-        loadPlaylist();
-
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == 0) {
-          console.log("TERMINOU!");
-          // TODO: suggest a new video
-        }
-
-        if (event.data == 1) {
-          var player = document.getElementById("player")
-          player.classList.add("player-fullscreen");
-          player.classList.remove("player-small");
-
-          var elem = document.documentElement;
-          if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) { /* Safari */
-            elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) { /* IE11 */
-            elem.msRequestFullscreen();
-          } else {
-            console.log("FULLSCREEN ERROR");
-          }
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
-
-      function loadPlaylist(){
-        var videoIds = ['maZoTHkRYuI','BSpZWIuiats','gDoVGhOrM28','6ZIogYd0gSo','ZYnsuCt3vLI'];
-        // playerControls.loadPlaylist(videoIds);
-        playerControls.cuePlaylist(videoIds);
-      }
-    </script>
+  </head>
+  <body>
+    <div id="left-panel">
+      <button class="panel-button button-selected-year" id="btn-2023" onclick="SelectYear(2023);">2023</button>
+      <button class="panel-button" id="btn-2022" onclick="SelectYear(2022);">2022</button>
+      <button class="panel-button" id="btn-2021" onclick="SelectYear(2021);">2021</button>
+      <button class="panel-button" id="btn-2019" onclick="SelectYear(2019);">2019</button>
+      <button class="panel-button" id="btn-2018" onclick="SelectYear(2018);">2018</button>
+    </div>
+      <div id="player" class="player-small"></div>
+    <script src="app.js"></script>
+    
+    
   </body>
 </html>
