@@ -16,21 +16,31 @@ body {
 }
 
 #player {
-    border: 0px;
+    /* nothing here yet */
 }
 
 .player-small {
     height: 50vh;
     width: 50vw;
     transition: 1s;
+    border-radius: 20px;
 }
 
 .player-fullscreen {
     height: 100vh;
     width: 100vw;
     transition: 1.5s;
+    border-radius: 0px;
 }
 
 .hidden {
     visibility: hidden;
+}
+
+.year-2018{
+    background-image: url("imgs/2023-road.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    backdrop-filter: blur(0.3rem);
 }
