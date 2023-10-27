@@ -1,4 +1,5 @@
 .body-2022 {
     background-image: url("../imgs/2022-chaos.jpeg");
     transition: background-image 0.5s ease-in-out;
+    transition-delay: 0.1s;
 }
