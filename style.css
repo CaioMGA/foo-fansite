@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+    background-color: blanchedalmond;
+    animation-duration: 1s;
+}
+
+#player {
+    border: 0px;
+}
+
+.player-small {
+    height: 50vh;
+    width: 50vw;
+    transition: 1s;
+}
+
+.player-fullscreen {
+    height: 100vh;
+    width: 100vw;
+    transition: 1.5s;
+}
+
+.hidden {
+    visibility: hidden;
+}
