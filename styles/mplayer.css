@@ -9,14 +9,14 @@
 .playlist-container {
     background: blueviolet;
     width: 100%;
+    height: 100%;
 }
 
-.album-cover{
-    display: block;
-    max-width: 2000px;
-    max-height: 2000px;
-    aspect-ratio: 1;
-    
+#album-cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .controls {
@@ -26,8 +26,8 @@
 }
 
 .control-button{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 120px;
+    max-height: 120px;
     min-width: 15px;
     min-height: 15px;
     flex-grow: 1;
@@ -37,24 +37,58 @@
     color: #ffdddd;
 }
 
-#cover-2018{
-    src: url("/imgs/2018-ten-hours.jpeg");
-}
-#cover-2019{
-    background: url("/imgs/2019-ravioli.jpeg");
-}
-#cover-2021{
-    background: url("/imgs/2021-greg.jpeg");
-}
-#cover-2022{
-    background: url("/imgs/2022-chaos.jpeg");
-}
-#cover-2023{
-    background: url("/imgs/2023-road.jpeg");
-    height: auto;
+.cover-2018{
+    background: url("/imgs/2018-ten-hours.jpeg");
+    aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+}
+.cover-2019{
+    background: url("/imgs/2019-ravioli.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-2021{
+    background: url("/imgs/2021-greg.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.cover-2022{
+    background: url("/imgs/2022-chaos.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-2023{
+    background: url("/imgs/2023-road.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cover-2018-small{
+    background: url("/imgs/2018-ten-hours.jpeg");
+}
+.cover-2019-small{
+    background: url("/imgs/2019-ravioli.jpeg");
+}
+.cover-2021-small{
+    background: url("/imgs/2021-greg.jpeg");
+}
+.cover-2022-small{
+    background: url("/imgs/2022-chaos.jpeg");
+}
+.cover-2023-small{
+    background: url("/imgs/2023-road.jpeg");
 }
 
 #music-player {
@@ -66,4 +100,36 @@
     height:100vh;
     width:100vw;
     background-color: blanchedalmond;
+}
+
+#playlist-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+}
+
+#hide-album-selection{
+    right:10px;
+    top:10px;
+    position: absolute;
+}
+
+#song-info{
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+#song-info>p{
+    color: white;
+    text-align: center;
+    margin: 10px;
+
 }

@@ -67,8 +67,11 @@ function loadPlaylist() {
 }
 //----------------------------------------------------------
 function Init() {
-    console.log("INIT");
-    SelectYear(2023);
+    var year = localStorage.getItem("album-id");
+    if (year == null) {
+        year = new Date().getFullYear();
+    }
+    SelectYear(year);
 }
 
 function SelectYear(year) {

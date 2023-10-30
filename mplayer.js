@@ -1,5 +1,3 @@
-console.log(localStorage.getItem("album-id"));
-
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -7,9 +5,10 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 var done = false;
 var paused = false;
+const BAND_NAME = "First of October"
 var albums = {
     "2018": [
-        { "name": "Ten Hours", "year": "2018" },
+        { "name": "Ten Hours", "year": "2018", "cover": "2018-ten-hours.jpeg" },
         { "id": "mIx9jBsWCOE", "title": "Woo!" },
         { "id": "X04DiwpTI2M", "title": "Can't Be Stopped" },
         { "id": "1fDrVDgUWLc", "title": "Two Friends" },
@@ -23,7 +22,7 @@ var albums = {
 
     ],
     "2019": [
-        { "name": "Gourmet Ravioli", "year": "2019" },
+        { "name": "Gourmet Ravioli", "year": "2019", "cover": "cover-2019-ravioli.jpeg" },
         { "id": "KMp5dOdyFaY", "title": "First of October" },
         { "id": "pppkzGTvJC0", "title": "Coffee! Yeah!" },
         { "id": "0m-wBGGIBPo", "title": "Ravioli" },
@@ -36,7 +35,7 @@ var albums = {
         { "id": "5mIiL-o2lQU", "title": "Do You Want To?" },
     ],
     "2021": [
-        { "name": "Gotta Record Everything Good", "year": "2021" },
+        { "name": "Gotta Record Everything Good", "year": "2021", "cover": "2021-greg.jpeg" },
         { "id": "2iKDK05xLXE", "title": "Miracle" },
         { "id": "aIoRpSqfCIU", "title": "Feels So Right" },
         { "id": "CxM6203NQ7w", "title": "Bookmobile" },
@@ -50,20 +49,20 @@ var albums = {
         { "id": "YtBswv40Gxo", "title": "The 11th Song" }
     ],
     "2022": [
-        { "name": "CHAOS", "year": "2022" },
-        { "id": "bPaWa1wuJr", "title": "Spooky Time" },
-        { "id": "2of8Sry8Wt", "title": "Headless" },
-        { "id": "PhaQIGf-Vz", "title": "Good Enough" },
-        { "id": "aydsBQiG5w", "title": "Riff Lord" },
-        { "id": "HQKRNOVO7L", "title": "Jangly Bones" },
-        { "id": "4vewq_GfXY", "title": "It's Halloween" },
-        { "id": "Tr3Qr1aoA6", "title": "Left My Pants in Chicago" },
-        { "id": "1nuAtrP512", "title": "Lonely Angel" },
-        { "id": "LCMWd1mBE6", "title": "Love to Say I Love You" },
-        { "id": "B8XpIhphbh", "title": "Find The Way" }
+        { "name": "CHAOS", "year": "2022", "cover": "2022-chaos.jpeg" },
+        { "id": "bPaWa1wuJrI", "title": "Spooky Time" },
+        { "id": "2of8Sry8WtE", "title": "Headless" },
+        { "id": "PhaQIGf-VzE", "title": "Good Enough" },
+        { "id": "aydsBQiG5w0", "title": "Riff Lord" },
+        { "id": "HQKRNOVO7LY", "title": "Jangly Bones" },
+        { "id": "4vewq_GfXYs", "title": "It's Halloween" },
+        { "id": "Tr3Qr1aoA6A", "title": "Left My Pants in Chicago" },
+        { "id": "1nuAtrP512Y", "title": "Lonely Angel" },
+        { "id": "LCMWd1mBE64", "title": "Love to Say I Love You" },
+        { "id": "B8XpIhphbhY", "title": "Find The Way" }
     ],
     "2023": [
-        { "name": "Across the Road", "year": "2023" },
+        { "name": "Across the Road", "year": "2023", "cover": "2023-road.jpeg" },
         { "id": "dHCdtWlyGfI", "title": "Across The Road" },
         { "id": "5_JIxR7mie0", "title": "Abby Rowed" },
         { "id": "8md5Wp9nkMA", "title": "It's Good to be Back" },
@@ -78,6 +77,8 @@ var albums = {
 }
 var playlist = [];
 var albumInfo = {};
+
+
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -105,15 +106,16 @@ function onPlayerStateChange(event) {
     if (event.data == 1) {
         // playing
         paused = false;
+        UpdateSongInfo();
     }
 
     if (event.data == 2) {
-        // playing
+        // paused
         paused = true;
     }
 
     if (event.data == -1) {
-        // playing
+        // not playing
         paused = true;
     }
 }
@@ -122,22 +124,28 @@ function stopVideo() {
 }
 
 function loadPlaylist() {
-    var albumId = localStorage.getItem("album-id");
-    playlist = albums[albumId];
+    var albumId = GetAlbumId();
+    playlist = [...albums[albumId]];
     albumInfo = playlist.shift();
-    console.log(playlist);
-    console.log(albumInfo);
     var videoIds = [];
     playlist.forEach(song => {
         videoIds.push(song["id"]);
     });
-    console.log(videoIds);
-    playerControls.loadPlaylist(videoIds);
-    Init();
+    // playerControls.loadPlaylist(videoIds);
+    playerControls.cuePlaylist(videoIds);
+    UpdateAlbumArt(albumId);
 }
 
-function SelectAlbum(albumId) {
+function UpdateAlbumArt(albumId) {
+    var albumCover = document.getElementById("album-cover");
+    var className = "cover-";
+    className += albumId;
+    albumCover.classList.add(className);
+}
 
+function ChangeAlbum(albumId) {
+    localStorage.setItem("album-id", albumId);
+    location.reload();
 }
 
 function PlayPause() {
@@ -163,4 +171,51 @@ function Prev() {
 function Next() {
     console.log("Next()");
     playerControls.nextVideo();
+}
+
+function ToggleAlbumSelection() {
+    var playlistSelector = document.getElementById("playlist-selector");
+
+    if (playlistSelector.classList.contains("hidden")) {
+        playlistSelector.classList.remove("hidden");
+    } else {
+        playlistSelector.classList.add("hidden");
+    }
+}
+
+function LoadAlbumsList() {
+    var albumList = document.getElementById("album-list");
+    for (const album in albums) {
+        var albumElement = document.createElement("button");
+        albumElement.classList = "album-button";
+        albumElement.classList.add("cover-" + album + "-small");
+        albumList.appendChild(albumElement);
+        var hoverInfo = document.createElement("div");
+        hoverInfo.classList.add("album-button-hover-info");
+        if (album != GetAlbumId()) {
+            hoverInfo.appendChild(document.createElement("div"));
+            albumElement.onclick = function () { ChangeAlbum(album); };
+        } else {
+            hoverInfo.innerText = "Now playing...";
+            albumElement.onclick = ToggleAlbumSelection;
+        }
+        albumElement.appendChild(hoverInfo);
+    }
+}
+
+function UpdateSongInfo() {
+    var data = playerControls.getVideoData();
+    document.getElementById("album-info-text").innerText = data.title + " - " + BAND_NAME;
+
+    document.getElementById("album-info-text").innerText = albumInfo.name + " (" + albumInfo.year + ")";
+}
+
+function GetAlbumId() {
+    var id = localStorage.getItem("album-id");
+    if (id == null) {
+        id = new Date().getFullYear();
+        localStorage.setItem("album-id", id);
+    }
+
+    return id;
 }

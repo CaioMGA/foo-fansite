@@ -5,24 +5,34 @@
     <link rel="stylesheet" type="text/css" href="styles/mplayer.css">
     <link rel="stylesheet" type="text/css" href="styles/playlist.css">
     <link rel="icon" type="image/x-icon" ref="favicon.ico">
-
-  </head>
-  <body>
     <title>First of October - MySound.club</title>
+  </head>
+  <body onload="LoadAlbumsList();">
     <div id="music-player">
         <div class="left-panel">
-          <div class="album-cover" id="cover-2023"></div>
+          <div id="album-cover"></div>
+          <div id="song-info">
+            <p id="song-info-text"></p>
+            <p id="album-info-text"></p>
+          </div>
+          
           <div class="controls">
             <button class="control-button" onclick="Prev();">Prev</button>
             <button class="control-button" onclick="PlayPause();">Play</button>
             <button class="control-button" onclick="Stop();">Stop</button>
             <button class="control-button" onclick="Next();">Next</button>
+            <button class="control-button" onclick="ToggleAlbumSelection();">Other Years</button>
           </div>
+          <div id="playlist-selector" class="hidden">
+            <button class="close-button" id="hide-album-selection" onclick="ToggleAlbumSelection();">X</button>
+            <div id="album-list">
+              <h1>First of October Albums</h1>
+            </div>
+          </div>
+          <a href="/index.html"><button class="back-button">Home</button></a>
         </div>
-        <div class="playlist-container">
-          <div id="player" class="hidden" ></div>
-          <!-- <div id="player"></div> -->
-        </div>
+        <div class="playlist-container"></div>
+        <div id="player" class="hidden"></div>
     </div>
     <script src="mplayer.js"></script>
     
