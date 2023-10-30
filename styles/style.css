@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Anton-Regular';
+    src: url('/fonts/Anton-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('/fonts/Antonio-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dosis-Medium';
+    src: url('/fonts/Dosis-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dekko-Regular';
+    src: url('/fonts/Dekko-Regular.ttf') format('truetype');
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -82,3 +102,32 @@ h1{
     width: 80px;
     height: 80px;
 }
+
+footer{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-family: 'Dosis-Medium';
+    background-color: #e6e6e6;
+}
+
+
+footer>a{
+    font-size: small;
+    font-style: normal;
+    color: black;
+    font-family: 'Antonio';
+    font-weight: 400;
+    text-decoration: none;
+}
+
+footer>a:hover {
+    text-decoration: underline;
+}
+
+.club {
+    color: red;
+    font-family: 'Dekko-Regular';
+    font-size: small;
+}
+
