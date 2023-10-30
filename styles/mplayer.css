@@ -125,7 +125,6 @@
 #song-info{
     height: auto;
     width: auto;
-    overflow: hidden;
 }
 #song-info>p{
     color: white;
