@@ -131,8 +131,8 @@ function loadPlaylist() {
     playlist.forEach(song => {
         videoIds.push(song["id"]);
     });
-    // playerControls.loadPlaylist(videoIds);
-    playerControls.cuePlaylist(videoIds);
+    playerControls.loadPlaylist(videoIds);
+    // playerControls.cuePlaylist(videoIds);
     UpdateAlbumArt(albumId);
 }
 
