@@ -132,7 +132,6 @@ function loadPlaylist() {
         videoIds.push(song["id"]);
     });
     playerControls.loadPlaylist(videoIds);
-    // playerControls.cuePlaylist(videoIds);
     UpdateAlbumArt(albumId);
 }
 
@@ -205,7 +204,7 @@ function LoadAlbumsList() {
 
 function UpdateSongInfo() {
     var data = playerControls.getVideoData();
-    document.getElementById("album-info-text").innerText = data.title + " - " + BAND_NAME;
+    document.getElementById("song-info-text").innerText = data.title + " - " + BAND_NAME;
 
     document.getElementById("album-info-text").innerText = albumInfo.name + " (" + albumInfo.year + ")";
 }
