@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/mplayer.css">
+    <link rel="stylesheet" type="text/css" href="styles/playlist.css">
+    <link rel="icon" type="image/x-icon" ref="favicon.ico">
+
+  </head>
+  <body>
+    <title>First of October - MySound.club</title>
+    <div id="music-player">
+        <div class="left-panel">
+          <div class="album-cover" id="cover-2023"></div>
+          <div class="controls">
+            <button class="control-button" onclick="Prev();">Prev</button>
+            <button class="control-button" onclick="PlayPause();">Play</button>
+            <button class="control-button" onclick="Stop();">Stop</button>
+            <button class="control-button" onclick="Next();">Next</button>
+          </div>
+        </div>
+        <div class="playlist-container">
+          <div id="player" class="hidden" ></div>
+          <!-- <div id="player"></div> -->
+        </div>
+    </div>
+    <script src="mplayer.js"></script>
+    
+    
+  </body>
+</html>

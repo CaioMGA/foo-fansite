@@ -1,0 +1,69 @@
+.left-panel {
+    background: #181111;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.playlist-container {
+    background: blueviolet;
+    width: 100%;
+}
+
+.album-cover{
+    display: block;
+    max-width: 2000px;
+    max-height: 2000px;
+    aspect-ratio: 1;
+    
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.control-button{
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 15px;
+    min-height: 15px;
+    flex-grow: 1;
+    aspect-ratio: 1;
+    margin:5px;
+    background: #222222;
+    color: #ffdddd;
+}
+
+#cover-2018{
+    src: url("/imgs/2018-ten-hours.jpeg");
+}
+#cover-2019{
+    background: url("/imgs/2019-ravioli.jpeg");
+}
+#cover-2021{
+    background: url("/imgs/2021-greg.jpeg");
+}
+#cover-2022{
+    background: url("/imgs/2022-chaos.jpeg");
+}
+#cover-2023{
+    background: url("/imgs/2023-road.jpeg");
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#music-player {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    height:100vh;
+    width:100vw;
+    background-color: blanchedalmond;
+}

@@ -74,6 +74,7 @@ function Init() {
 function SelectYear(year) {
     UpdateStyles(year);
     UpdateYearButtons(year);
+    localStorage.setItem("album-id", year);
 }
 
 function UpdateStyles(year) {
