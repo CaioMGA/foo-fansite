@@ -131,7 +131,7 @@ function loadPlaylist() {
     playlist.forEach(song => {
         videoIds.push(song["id"]);
     });
-    playerControls.loadPlaylist(videoIds);
+    // playerControls.loadPlaylist(videoIds);
     UpdateAlbumArt(albumId);
 }
 
@@ -170,6 +170,10 @@ function Prev() {
 function Next() {
     console.log("Next()");
     playerControls.nextVideo();
+}
+
+function CreateSongList() {
+
 }
 
 function ToggleAlbumSelection() {
