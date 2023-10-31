@@ -19,11 +19,12 @@
           </div>
           
           <div class="controls">
-            <button class="control-button" onclick="Prev();">Prev</button>
-            <button class="control-button" onclick="PlayPause();">Play</button>
-            <button class="control-button" onclick="Stop();">Stop</button>
-            <button class="control-button" onclick="Next();">Next</button>
-            <button class="control-button" onclick="ToggleAlbumSelection();">Other Years</button>
+            <button class="control-button" onclick="Prev();"><img src="imgs/mb_prev.png" alt="Previous Song"></button>
+            <button class="control-button" onclick="Stop();"><img src="imgs/mb_stop.png" alt="Stop"></button>
+            <button class="control-button" onclick="PlayPause();"><img src="imgs/mb_play.png" alt="Play"></button>
+            <button class="control-button hidden" onclick="PlayPause();"><img src="imgs/mb_pause.png" alt="Pause"></button>
+            <button class="control-button" onclick="Next();"><img src="imgs/mb_next.png" alt="Next Song"></button>
+            <button class="control-button" onclick="ToggleAlbumSelection();"><img src="imgs/mb_menu.png" alt="Menu"></button>
           </div>
           <div id="playlist-selector" class="hidden">
             <button class="close-button" id="hide-album-selection" onclick="ToggleAlbumSelection();">X</button>

@@ -40,6 +40,14 @@ body{
     color: #ffdddd;
 }
 
+.control__button__icon{
+    position: absolute;
+    top:10%;
+    right: 10%;
+    bottom: 10%;
+    left:10%;
+}
+
 .control-button:hover{
     background: #303030;
 }
