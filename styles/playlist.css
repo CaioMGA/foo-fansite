@@ -14,6 +14,7 @@
     color: white;
     font-size: larger;
     content-visibility: hidden;
+    border-radius: 8px;
 }
 
 .album-button:hover{

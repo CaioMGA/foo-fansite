@@ -13,6 +13,7 @@
     <div id="music-player">
         <div class="left-panel">
           <div id="album-cover"></div>
+          <progress id="song-progress" class="progress__song" value="0.01" max="1"></progress>
           <div id="song-info">
             <p id="song-info-text">Nome da musica</p>
             <p id="album-info-text">nome do album</p>
@@ -21,8 +22,8 @@
           <div class="controls">
             <button class="control-button" onclick="Prev();"><img src="imgs/mb_prev.png" alt="Previous Song"></button>
             <button class="control-button" onclick="Stop();"><img src="imgs/mb_stop.png" alt="Stop"></button>
-            <button class="control-button" onclick="PlayPause();"><img src="imgs/mb_play.png" alt="Play"></button>
-            <button class="control-button hidden" onclick="PlayPause();"><img src="imgs/mb_pause.png" alt="Pause"></button>
+            <button id="play-button" class="control-button hidden" onclick="PlayPause();"><img src="imgs/mb_play.png" alt="Play"></button>
+            <button id="pause-button" class="control-button" onclick="PlayPause();"><img src="imgs/mb_pause.png" alt="Pause"></button>
             <button class="control-button" onclick="Next();"><img src="imgs/mb_next.png" alt="Next Song"></button>
             <button class="control-button" onclick="ToggleAlbumSelection();"><img src="imgs/mb_menu.png" alt="Menu"></button>
           </div>

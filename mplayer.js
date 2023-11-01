@@ -77,6 +77,9 @@ var albums = {
 }
 var playlist = [];
 var albumInfo = {};
+var curSongPlayTime = 0;
+var curSongDuration = 0;
+var progressInterval;
 
 
 
@@ -107,6 +110,7 @@ function onPlayerStateChange(event) {
         // playing
         paused = false;
         UpdateSongInfo();
+        SetProgressBar();
     }
 
     if (event.data == 2) {
@@ -131,7 +135,7 @@ function loadPlaylist() {
     playlist.forEach(song => {
         videoIds.push(song["id"]);
     });
-    // playerControls.loadPlaylist(videoIds);
+    playerControls.loadPlaylist(videoIds);
     UpdateAlbumArt(albumId);
 }
 
@@ -148,28 +152,37 @@ function ChangeAlbum(albumId) {
 }
 
 function PlayPause() {
-    console.log("PlayPause()");
     if (paused) {
+        document.getElementById("play-button").classList.add("hidden");
+        document.getElementById("pause-button").classList.remove("hidden");
         playerControls.playVideo();
+        ResumeProgressBar();
     } else {
+        document.getElementById("play-button").classList.remove("hidden");
+        document.getElementById("pause-button").classList.add("hidden");
         playerControls.pauseVideo();
+        PauseProgressBar();
     }
 
 }
 
 function Stop() {
-    console.log("Stop()");
     playerControls.stopVideo();
+    document.getElementById("play-button").classList.remove("hidden");
+    document.getElementById("pause-button").classList.add("hidden");
+    StopProgressBar();
 }
 
 function Prev() {
-    console.log("Prev()");
     playerControls.previousVideo();
+    document.getElementById("play-button").classList.add("hidden");
+    document.getElementById("pause-button").classList.remove("hidden");
 }
 
 function Next() {
-    console.log("Next()");
     playerControls.nextVideo();
+    document.getElementById("play-button").classList.add("hidden");
+    document.getElementById("pause-button").classList.remove("hidden");
 }
 
 function CreateSongList() {
@@ -221,4 +234,49 @@ function GetAlbumId() {
     }
 
     return id;
+}
+
+function SetProgressBar() {
+    curSongPlayTime = 0;
+    curSongDuration = -1; //prevents division by zero
+    if (progressInterval != null) {
+        clearInterval(progressInterval);
+        progressInterval = null;
+    }
+    progressInterval = setInterval(MoveProgressBar, 500);
+}
+
+function MoveProgressBar() {
+    // why this?
+    // the fewer requests to the youtube api the better
+    // so, I don't have to verify 
+    curSongPlayTime += 0.5;
+    if (curSongDuration < 1) {
+        curSongDuration = playerControls.getDuration();
+    }
+    var progress = curSongPlayTime / curSongDuration;
+    if (progress > 1) {
+        clearInterval(progressInterval);
+        progressInterval = null;
+    }
+    document.getElementById("song-progress").value = progress;
+}
+
+function PauseProgressBar() {
+    clearInterval(progressInterval);
+    progressInterval = null;
+}
+
+function ResumeProgressBar() {
+    if (progressInterval != null) {
+        clearInterval(progressInterval);
+    }
+    curSongPlayTime = playerControls.getCurrentTime();
+    progressInterval = setInterval(MoveProgressBar, 500);
+}
+
+function StopProgressBar() {
+    clearInterval(progressInterval);
+    progressInterval = null;
+    document.getElementById("song-progress").value = 0;
 }
