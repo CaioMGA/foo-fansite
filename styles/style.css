@@ -103,7 +103,7 @@ h1{
     height: 80px;
 }
 
-footer{
+.footer__regular{
     margin-top: 40px;
     margin-bottom: 20px;
     padding: 10px 20px;
@@ -111,11 +111,32 @@ footer{
     background-color: #e6e6e6;
 }
 
+.footer__regular>a{
+    color: black;
+}
+
+.footer__dark{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-family: 'Dosis-Medium';
+    background-color: transparent;
+    color: white;
+}
+
+.footer__dark>a{
+    color: white;
+}
+
+.footer__right{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
 
 footer>a{
     font-size: small;
     font-style: normal;
-    color: black;
     font-family: 'Antonio';
     font-weight: 400;
     text-decoration: none;
@@ -129,5 +150,6 @@ footer>a:hover {
     color: red;
     font-family: 'Dekko-Regular';
     font-size: small;
+    margin-right: 0.3em;
 }
 
