@@ -46,7 +46,7 @@
     flex-direction: column;
     justify-content: stretch;
     background-color: #151111;
-    width: 100%;
+    width: 50vw;
     height: 100%;
 }
 
@@ -120,6 +120,10 @@
 
 .playlist__list__item__name{
     color: #ffe1e1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
 }
 
 .playlist__list__item__time{
@@ -127,6 +131,12 @@
     font-weight: 700;
 }
 
-.song-time{
-    color: #ffe1e1;
+#song-info{
+    overflow: hidden;
+}
+
+#song-info-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

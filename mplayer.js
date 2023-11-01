@@ -81,6 +81,7 @@ var curSongPlayTime = 0;
 var curSongDuration = 0;
 var progressInterval;
 const PROGRESS_UPDATE_INTERVAL = 250;
+const PROGRESS_UPDATE_TIME_INCREMENT = 0.25;
 
 
 function onYouTubeIframeAPIReady() {
@@ -110,12 +111,17 @@ function onPlayerStateChange(event) {
         // playing
         paused = false;
         UpdateSongInfo();
+        curSongPlayTime = playerControls.getCurrentTime();
+        curSongDuration = playerControls.getDuration();
         SetProgressBar();
     }
 
     if (event.data == 2) {
         // paused
         paused = true;
+        curSongPlayTime = playerControls.getCurrentTime();
+        curSongDuration = playerControls.getDuration();
+        MoveProgressBar();
     }
 
     if (event.data == -1) {
@@ -131,12 +137,17 @@ function loadPlaylist() {
     var albumId = GetAlbumId();
     playlist = [...albums[albumId]];
     albumInfo = playlist.shift();
+    document.getElementById("album-name-big").textContent = albumInfo.name + " (" + albumInfo.year + ")";
+    document.getElementById("band-name-big").textContent = BAND_NAME;
+
     var videoIds = [];
     playlist.forEach(song => {
         videoIds.push(song["id"]);
     });
     playerControls.loadPlaylist(videoIds);
     UpdateAlbumArt(albumId);
+    CreateSongList();
+    UpdatePlaylistState(0);
 }
 
 function UpdateAlbumArt(albumId) {
@@ -186,7 +197,41 @@ function Next() {
 }
 
 function CreateSongList() {
+    for (var songIndex = 0; songIndex < playlist.length; songIndex++) {
+        CreateSongListItem(songIndex, playlist[songIndex].title);
+    }
+}
 
+function CreateSongListItem(index, songName) {
+    var list = document.getElementsByClassName("playlist__list")[0];
+    let temp = document.getElementsByTagName("template")[0];
+    let clon = document.importNode(temp.content, true);
+
+    // Modify the cloned content with song details
+    var button = clon.querySelector('.playlist__list__item');
+    button.setAttribute("onclick", "SelectSong(" + index + ")");
+    var name = clon.querySelector('.playlist__list__item__name');
+    name.textContent = songName;
+
+    list.appendChild(clon);
+}
+
+function SelectSong(index) {
+    playerControls.playVideoAt(index);
+
+    UpdatePlaylistState(index);
+}
+
+function UpdatePlaylistState(index) {
+    var list = document.getElementsByClassName("playlist__list")[0];
+
+    for (let i = 0; i < playlist.length; i++) {
+        if (index == i) {
+            list.children[i].querySelector(".playlist__list__item").classList.add("playing");
+        } else {
+            list.children[i].querySelector(".playlist__list__item").classList.remove("playing");
+        }
+    }
 }
 
 function ToggleAlbumSelection() {
@@ -237,8 +282,7 @@ function GetAlbumId() {
 }
 
 function SetProgressBar() {
-    curSongPlayTime = 0;
-    curSongDuration = -1; //prevents division by zero
+    //prevents division by zero
     if (progressInterval != null) {
         clearInterval(progressInterval);
         progressInterval = null;
@@ -249,8 +293,7 @@ function SetProgressBar() {
 function MoveProgressBar() {
     // why this?
     // the fewer requests to the youtube api the better
-    // so, I don't have to verify 
-    curSongPlayTime += 0.5;
+    curSongPlayTime += PROGRESS_UPDATE_TIME_INCREMENT;
     if (curSongDuration < 1) {
         curSongDuration = playerControls.getDuration();
     }
@@ -259,6 +302,11 @@ function MoveProgressBar() {
         clearInterval(progressInterval);
         progressInterval = null;
     }
+
+    if (!isFinite(progress)) {
+        progress = 0;
+    }
+
     document.getElementById("song-progress").value = progress;
     document.getElementById("song-time").textContent = GetFormattedTime(curSongPlayTime) + " / " + GetFormattedTime(curSongDuration);
 }

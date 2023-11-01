@@ -3,7 +3,7 @@ body{
 }
 
 .left-panel {
-    width: 100%;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,7 +163,7 @@ body{
 
 .progress__song::-webkit-progress-value{
     background-color: #ffe1e1 ;
-    transition: 1s;
+    transition: 0.3s;
 }
 
 .container__progress {
