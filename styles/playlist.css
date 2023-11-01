@@ -133,6 +133,8 @@
 
 #song-info{
     overflow: hidden;
+    height: auto;
+    padding: 0 0 1em 0;
 }
 
 #song-info-text{
