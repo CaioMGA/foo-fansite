@@ -24,15 +24,15 @@
           </div>
           
           <div class="controls">
-            <button class="control-button" onclick="Prev();"><img src="imgs/mb_prev.png" alt="Previous Song"></button>
-            <button id="stop-button" class="control-button" onclick="Stop();"><img src="imgs/mb_stop.png" alt="Stop"></button>
-            <button id="play-button" class="control-button hidden" onclick="PlayPause();"><img src="imgs/mb_play.png" alt="Play"></button>
-            <button id="pause-button" class="control-button" onclick="PlayPause();"><img src="imgs/mb_pause.png" alt="Pause"></button>
-            <button class="control-button" onclick="Next();"><img src="imgs/mb_next.png" alt="Next Song"></button>
-            <button id="menu-button" class="control-button" onclick="ToggleAlbumSelection();"><img src="imgs/mb_menu.png" alt="Menu"></button>
+            <button id="prev-button" class="control-button" onclick="Prev();"></button>
+            <button id="stop-button" class="control-button" onclick="Stop();"></button>
+            <button id="play-button" class="control-button hidden" onclick="PlayPause();"></button>
+            <button id="pause-button" class="control-button" onclick="PlayPause();"></button>
+            <button id="next-button" class="control-button" onclick="Next();"></button>
+            <button id="menu-button" class="control-button" onclick="ToggleAlbumSelection();"></button>
           </div>
           <div id="playlist-selector" class="hidden">
-            <button class="close-button" id="hide-album-selection" onclick="ToggleAlbumSelection();">X</button>
+            <button class="close-button control-button" id="hide-album-selection" onclick="ToggleAlbumSelection();">X</button>
             <div id="album-list">
               <h1>First of October Albums</h1>
             </div>

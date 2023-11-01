@@ -145,6 +145,10 @@
     text-overflow: ellipsis;
 }
 
+#playlist-selector{
+    z-index: 1000;
+}
+
 @media screen and (max-width: 768px) {
 
 .container__playlist{
@@ -179,5 +183,38 @@
     .playlist__list__item__icon{
         margin: 0;
         padding: 0;
+    }
+
+    #playlist-selector{
+        position: absolute;
+        display: block;
+        top:0;
+        width: 100vw;
+        text-align: center;
+        overflow-wrap: normal;
+    }
+
+    #album-list{
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        height: fit-content;
+        left: 0;
+        top:0;
+    }
+
+    #album-list h1{
+        display: block;
+        width: 40px;
+        font-size: 5vw;
+        height: 10vh;
+        padding-top: 7vh;
+        padding-left: 1em;
+        left: 0;
+        text-wrap: nowrap;
+        overflow: visible;
     }
 }

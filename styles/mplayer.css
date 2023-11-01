@@ -39,6 +39,13 @@ body{
     background: #222222;
     color: #ffdddd;
     border-radius: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.control-button:hover{
+    background-color: #444444;
 }
 
 .control__button__icon{
@@ -49,9 +56,30 @@ body{
     left:10%;
 }
 
-.control-button:hover{
-    background: #303030;
+#play-button{
+    background-image: url("/imgs/mb_play.png");
 }
+
+#pause-button{
+    background-image: url("/imgs/mb_pause.png");
+}
+
+#prev-button{
+    background-image: url("/imgs/mb_prev.png");
+}
+
+#next-button{
+    background-image: url("/imgs/mb_next.png");
+}
+
+#stop-button{
+    background-image: url("/imgs/mb_stop.png");
+}
+
+#menu-button{
+    background-image: url("/imgs/mb_menu.png");
+}
+
 
 .cover-2018{
     background: url("/imgs/2018-ten-hours.jpeg");
@@ -183,6 +211,12 @@ body{
     margin: 0 0 0 1em;
 }
 
+.close-button{
+    width:100px;
+    height:100px;
+    font-size: 2em;
+}
+
 @media screen and (max-width: 768px) {
     .left-panel {
         display: flex;
@@ -206,15 +240,15 @@ body{
     .controls{
         display: flex;
         position: fixed;
-        top:31vh;
+        top:33vh;
         width: 90vw;
     }
 
     .control-button{
         margin: 0 0.7em;
         width:30vh;
-        max-width: 10vh;
-        max-height: 10vh;
+        max-width: 8vh;
+        max-height: 8vh;
     }
 
     #stop-button{
@@ -226,8 +260,8 @@ body{
         position: fixed;
         top:1.1em;
         right:0%;
-        max-width: 7vh;
-        max-height: 7vh;
+        width: 20vw;
+        height: 20vw;
     }
 
     .container__progress{
@@ -248,5 +282,13 @@ body{
         background-image: linear-gradient(to top, transparent, #080000);
     }
 
-    
+    .close-button{
+        margin:0;
+        position: absolute;
+        width:100px;
+        height:100px;
+        font-size: 1.5em;
+        right:0;
+        top:1.2em;
+    }
 }
