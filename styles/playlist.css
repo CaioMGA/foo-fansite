@@ -48,6 +48,8 @@
     background-image: linear-gradient(to bottom, #151111, #080000);
     width: 50vw;
     height: 100%;
+    overflow-y: auto;
+    overflow-x: clip;
 }
 
 .playlist__album__info{
@@ -148,8 +150,6 @@
 .container__playlist{
         display: block;
         width: 100%;
-        overflow-y: auto;
-        overflow-x: clip;
     }
 
     #album-info-text{
