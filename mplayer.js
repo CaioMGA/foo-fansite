@@ -7,6 +7,8 @@ var done = false;
 var paused = false;
 const BAND_NAME = "First of October"
 var albums = {
+    //2 second video for testing
+    // { "id": "TK4N5W22Gts", "title": "TEST" },
     "2018": [
         { "name": "Ten Hours", "year": "2018", "cover": "2018-ten-hours.jpeg" },
         { "id": "mIx9jBsWCOE", "title": "Woo!" },
@@ -33,6 +35,7 @@ var albums = {
         { "id": "NTvWFmU_ut4", "title": "Ben Wyatt" },
         { "id": "uC5u0_xDz10", "title": "We Didn't Have Time to Get Lyrics on This One" },
         { "id": "5mIiL-o2lQU", "title": "Do You Want To?" },
+
     ],
     "2021": [
         { "name": "Gotta Record Everything Good", "year": "2021", "cover": "2021-greg.jpeg" },
@@ -103,7 +106,7 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
     if (event.data == 0) {
-        console.log("TERMINOU!");
+        ToggleAlbumSelection();
         // TODO: suggest a new video
     }
 
@@ -114,6 +117,7 @@ function onPlayerStateChange(event) {
         curSongPlayTime = playerControls.getCurrentTime();
         curSongDuration = playerControls.getDuration();
         SetProgressBar();
+        UpdatePlaylistState(playerControls.getPlaylistIndex());
     }
 
     if (event.data == 2) {
