@@ -182,3 +182,71 @@ body{
     text-align: right;
     margin: 0 0 0 1em;
 }
+
+@media screen and (max-width: 768px) {
+    .left-panel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 46vh;
+    }
+
+    #music-player{
+        display: block;
+        text-align: center;
+        
+    }
+
+    #album-cover{
+        display: block;
+        width: 40vh;
+    }
+
+    .controls{
+        display: flex;
+        position: fixed;
+        top:31vh;
+        width: 90vw;
+    }
+
+    .control-button{
+        margin: 0 0.7em;
+        width:30vh;
+        max-width: 10vh;
+        max-height: 10vh;
+    }
+
+    #stop-button{
+        display: none;
+        visibility: hidden;
+    }
+
+    #menu-button{
+        position: fixed;
+        top:1.1em;
+        right:0%;
+        max-width: 7vh;
+        max-height: 7vh;
+    }
+
+    .container__progress{
+        width:100%;
+        
+    }
+
+    .back-button{
+        display: none;
+        visibility: hidden;
+    }
+
+    #song-info{
+        display: block;
+        position: fixed;
+        width: 100vw;
+        top:1em;
+        background-image: linear-gradient(to top, transparent, #080000);
+    }
+
+    
+}

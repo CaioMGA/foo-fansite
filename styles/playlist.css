@@ -142,3 +142,42 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media screen and (max-width: 768px) {
+
+.container__playlist{
+        display: block;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: clip;
+    }
+
+    #album-info-text{
+        padding:0;
+        margin:0;
+        width:100vw;
+        display: none;
+    }
+
+    .playlist__album__info__title{
+        font-size: 1.2em;
+    }
+
+    .playlist__album__info__text{
+        font-size: 0.7em;
+    }
+
+    .playlist__list{
+        margin: 0 0 0 0;
+        padding: 0 0 200px 0;
+    }
+    .playlist__list__item{
+        margin: 0;
+        padding: 0 0.2em 0 0;
+    }
+
+    .playlist__list__item__icon{
+        margin: 0;
+        padding: 0;
+    }
+}
