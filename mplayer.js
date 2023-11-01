@@ -20,7 +20,7 @@ var albums = {
         { "id": "pUrzMHzMpBM", "title": "Things to Do" },
         { "id": "xOPRNTu9PsY", "title": "Always" },
         { "id": "LsYsXlB18pE", "title": "Spoilers for Playdead's Inside" },
-        { "id": "GQqBzFmSuLY", "title": "Possible Band Names" }
+        { "id": "GQqBzFmSuLY", "title": "Possible Band Names" },
 
     ],
     "2019": [
@@ -107,7 +107,8 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
     if (event.data == 0) {
         ToggleAlbumSelection();
-        // TODO: suggest a new video
+        UpdatePlaylistState(-1);
+        Stop();
     }
 
     if (event.data == 1) {
