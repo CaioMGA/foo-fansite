@@ -154,7 +154,6 @@ body{
     height: 0.7em;
     align-self: center;
     background-color: #222222;
-    margin-top:1em;
     margin-bottom:0.2em;
 }
 
@@ -167,3 +166,19 @@ body{
     transition: 1s;
 }
 
+.container__progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    text-align: center;
+    margin-top:1em;
+}
+
+.song-time{
+    color: #ffe1e1;
+    width: 140px;
+    height: 100%;
+    text-align: right;
+    margin: 0 0 0 1em;
+}

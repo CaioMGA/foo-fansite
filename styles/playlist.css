@@ -123,7 +123,10 @@
 }
 
 .playlist__list__item__time{
-    padding-right: 1em;
     color: #ffe1e1;
     font-weight: 700;
+}
+
+.song-time{
+    color: #ffe1e1;
 }

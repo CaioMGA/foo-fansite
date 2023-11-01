@@ -80,7 +80,7 @@ var albumInfo = {};
 var curSongPlayTime = 0;
 var curSongDuration = 0;
 var progressInterval;
-
+const PROGRESS_UPDATE_INTERVAL = 250;
 
 
 function onYouTubeIframeAPIReady() {
@@ -243,7 +243,7 @@ function SetProgressBar() {
         clearInterval(progressInterval);
         progressInterval = null;
     }
-    progressInterval = setInterval(MoveProgressBar, 500);
+    progressInterval = setInterval(MoveProgressBar, PROGRESS_UPDATE_INTERVAL);
 }
 
 function MoveProgressBar() {
@@ -260,6 +260,7 @@ function MoveProgressBar() {
         progressInterval = null;
     }
     document.getElementById("song-progress").value = progress;
+    document.getElementById("song-time").textContent = GetFormattedTime(curSongPlayTime) + " / " + GetFormattedTime(curSongDuration);
 }
 
 function PauseProgressBar() {
@@ -272,11 +273,19 @@ function ResumeProgressBar() {
         clearInterval(progressInterval);
     }
     curSongPlayTime = playerControls.getCurrentTime();
-    progressInterval = setInterval(MoveProgressBar, 500);
+    progressInterval = setInterval(MoveProgressBar, PROGRESS_UPDATE_INTERVAL);
 }
 
 function StopProgressBar() {
     clearInterval(progressInterval);
     progressInterval = null;
     document.getElementById("song-progress").value = 0;
+}
+
+function GetFormattedTime(totalSeconds) {
+    const seconds = Math.floor(totalSeconds); // Ensure whole number of seconds
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    return `${minutes}:${(remainingSeconds < 10 ? '0' : '')}${remainingSeconds}`;
 }

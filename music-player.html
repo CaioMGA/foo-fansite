@@ -13,7 +13,11 @@
     <div id="music-player">
         <div class="left-panel">
           <div id="album-cover"></div>
-          <progress id="song-progress" class="progress__song" value="0.01" max="1"></progress>
+          <div class="container__progress">
+            <progress id="song-progress" class="progress__song" value="0.01" max="1"></progress>
+            <p id="song-time" class="song-time">0:00/0:00</p>
+          </div>
+          
           <div id="song-info">
             <p id="song-info-text">Nome da musica</p>
             <p id="album-info-text">nome do album</p>
