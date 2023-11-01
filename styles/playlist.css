@@ -149,6 +149,11 @@
     z-index: 1000;
 }
 
+#album-list h1{
+    font-size: 26px;
+    margin-bottom: 10%;
+}
+
 @media screen and (max-width: 768px) {
 
 .container__playlist{
@@ -191,7 +196,7 @@
         top:0;
         width: 100vw;
         text-align: center;
-        overflow-wrap: normal;
+        overflow-y: scroll;
     }
 
     #album-list{
@@ -201,19 +206,18 @@
         justify-items: center;
         flex-wrap: nowrap;
         overflow-y: scroll;
-        height: fit-content;
+        width: 100vw;
         left: 0;
         top:0;
+        text-align: center;
     }
 
     #album-list h1{
         display: block;
-        width: 40px;
+        width: 100%;
         font-size: 5vw;
         height: 10vh;
         padding-top: 7vh;
-        padding-left: 1em;
-        left: 0;
         text-wrap: nowrap;
         overflow: visible;
     }
