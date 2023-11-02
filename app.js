@@ -12,6 +12,8 @@ var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         videoId: '',
+        width: 10,
+        height: 10,
         playerVars: { 'controls': 0 },
         events: {
             'onReady': onPlayerReady,
@@ -52,7 +54,7 @@ function onPlayerStateChange(event) {
             console.log("FULLSCREEN ERROR");
         }
 
-        HideLeftPanel();
+        ShowPlayerOnly();
     }
 }
 function stopVideo() {
@@ -105,10 +107,16 @@ function UpdateYearButtons(year) {
     }
 }
 
-function HideLeftPanel() {
+function ShowPlayerOnly() {
     document.getElementById("left-panel").classList.add("hidden");
+    document.getElementById("music-player-button").classList.add("hidden");
+    document.getElementsByClassName("footer__regular")[0].classList.add("hidden");
 }
 
 function ShowLeftPanel() {
     document.getElementById("left-panel").classList.remove("hidden");
+    document.getElementById("music-player-button").classList.remove("hidden");
+    document.getElementsByClassName("footer__regular")[0].classList.remove("hidden");
+
+
 }

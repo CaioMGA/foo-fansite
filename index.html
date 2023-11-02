@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" type="text/css" href="styles/2018.css">
     <link rel="stylesheet" type="text/css" href="styles/2019.css">
@@ -14,16 +15,20 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div id="left-panel">
+    <div class="container__years">
       <button class="panel-button button-selected-year" id="btn-2023" onclick="SelectYear(2023);">2023</button>
       <button class="panel-button" id="btn-2022" onclick="SelectYear(2022);">2022</button>
       <button class="panel-button" id="btn-2021" onclick="SelectYear(2021);">2021</button>
       <button class="panel-button" id="btn-2019" onclick="SelectYear(2019);">2019</button>
       <button class="panel-button" id="btn-2018" onclick="SelectYear(2018);">2018</button>
     </div>
-    <div id="player" class="player-small"></div>
-    <a href="/music-player.html"><button class="player-small">Show Music Player</button></a>
-    <footer class="footer__regular"><a href="https://mysound.club">MySound<span class="club">.club</span></a> by Caio Amaral</footer>
+    <h1 class="page-title page-title-outside-main-content">First of October</h1>
+    <div class="main-buttons-container">
+      <h1 class="page-title page-title-inside-main-content">First of October</h1>
+      <div id="player" class="player-small"></div>
+      <a id="music-player-button" href="/music-player.html"><button class="player-small">Show Music Player</button></a>
+    </div>
+    <footer class="footer__regular footer__fixed"><a href="https://mysound.club">MySound<span class="club">.club</span></a> by Caio Amaral</footer>
     
   </body>
 </html>
