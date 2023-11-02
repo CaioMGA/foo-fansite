@@ -81,6 +81,10 @@ body {
     border-radius: 20px;
 }
 
+.player-small:hover{
+    scale: 1.02;
+}
+
 .player-fullscreen {
     height: 100vh;
     width: 100vw;
@@ -110,6 +114,10 @@ body {
     margin-left: 2px;
     margin-right: 2px;
     background-color: #cccccc;
+}
+
+.panel-button:hover{
+    scale: 1.1;
 }
 
 .button-selected-year{
