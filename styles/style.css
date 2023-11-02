@@ -49,20 +49,22 @@ body {
 }
 
 .page-title-outside-main-content{
-    display: block;
-    visibility: visible;
+    display: none;
+    visibility: hidden;
     position: absolute;
     font-size: 4em;
     top:1em;
 }
 
 .page-title-inside-main-content{
-    display: none;
-    visibility: hidden;
+    display: block;
+    visibility: visible;
+    font-size: 4em;
+    
 }
 
 .main-buttons-container{
-    top:20vh;
+    top:10vh;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -257,17 +259,22 @@ footer>a:hover {
         flex-direction: column;
         align-items: end;
         justify-content: center;
+
+        top:calc(28vh);
     }
 
     .main-buttons-container{
         right:0;
         margin-right: 5px;
+        top:15vh;
     }
 
     .page-title-outside-main-content{
         display: block;
         visibility: visible;
-        font-size: xx-large;
+        font-size: 2.1em;
+        top: 0.75em;
+        margin:0;
     }
 
     .page-title-inside-main-content{
@@ -293,11 +300,13 @@ footer>a:hover {
         align-items: baseline;
         flex-wrap: wrap;
         justify-content: center;
+
     }
 
     .main-buttons-container{
         left: auto;
         right: auto;
+        top:20vh;
     }
 
     .player-small{
