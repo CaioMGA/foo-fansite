@@ -79,6 +79,7 @@ body {
     width: 30vw;
     transition: 1s;
     border-radius: 20px;
+    margin-bottom: 2.5px;
 }
 
 .player-small:hover{
