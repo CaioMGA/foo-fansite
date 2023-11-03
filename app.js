@@ -104,30 +104,33 @@ function UpdateBackground(year) {
     console.log(year);
     var elem = document.getElementsByTagName("body")[0];
     var moButton = document.getElementById("button-making-of");
+    var spButton = document.getElementById("button-special");
     var musicPlayerButton = document.getElementById("music-player-button");
     for (var y = 2018; y <= 2023; y++) {
         if (y == 2020) continue;
         if (year == y) {
             elem.classList.add("body-" + y);
             moButton.classList.add("mo-" + y);
+            spButton.classList.add("sp-" + y);
             musicPlayerButton.classList.add("cover-" + y + "-small")
         } else {
             elem.classList.remove("body-" + y);
             moButton.classList.remove("mo-" + y);
+            spButton.classList.remove("sp-" + y);
             musicPlayerButton.classList.remove("cover-" + y + "-small")
         }
     }
 }
 
 function ShowMakingOf() {
-    document.getElementById("player").classList.remove("hidden");
+    ShowPlayerOnly();
     playerControls.stopVideo();
     playerControls.clearVideo();
     playerControls.loadVideoById(videos[albumId].makingOf);
 }
 
 function ShowSpecial() {
-    document.getElementById("player").classList.remove("hidden");
+    ShowPlayerOnly();
     playerControls.stopVideo();
     playerControls.clearVideo();
     playerControls.loadVideoById(videos[albumId].special);
@@ -135,6 +138,10 @@ function ShowSpecial() {
 
 function ShowMusicPlayer() {
     window.location = "/music-player.html";
+}
+
+function ShowAbout() {
+    console.log("ABOUT FIRST OF OCTOBER AND ABOUT THIS SITE");
 }
 
 function UpdateYearButtons(year) {
@@ -158,6 +165,10 @@ function ShowPlayerOnly() {
 
     document.getElementsByClassName("fullscreen-menu")[0].classList.remove("hidden");
 
+    document.getElementById("player").classList.remove("hidden");
+    document.getElementById("player").classList.remove("player-small");
+    document.getElementById("player").classList.add("player-fullscreen");
+
 
 }
 
@@ -169,6 +180,10 @@ function ShowMinimizedVideoLayout() {
     document.getElementsByTagName("footer")[0].classList.remove("hidden");
 
     document.getElementById("player").classList.add("hidden");
+    document.getElementById("player").classList.add("player-small");
+    document.getElementById("player").classList.remove("player-fullscreen");
+
+    document.getElementsByClassName("fullscreen-menu")[0].classList.add("hidden");
 
     playerControls.pauseVideo();
     playerControls.clearVideo();
