@@ -123,7 +123,7 @@ function UpdateBackground(year) {
 
 function ShowMakingOf() {
     document.getElementById("player").classList.remove("hidden");
-    playerControls.playVideo();
+    playerControls.seekTo(0);
 }
 
 function UpdateYearButtons(year) {
@@ -173,8 +173,10 @@ function IsFullscreen() {
 
 function PlayMakingOf() {
     playerControls.playVideoAt(0);
+    playerControls.seekTo(0);
 }
 
 function PlaySpecial() {
     playerControls.playVideoAt(1);
+    playerControls.seekTo(0);
 }
