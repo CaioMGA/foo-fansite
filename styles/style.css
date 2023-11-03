@@ -21,6 +21,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Dosis-Medium';
 }
 
 body {
@@ -41,11 +42,87 @@ body {
     backdrop-filter: blur(0.3rem);
 }
 
+.cover-2018{
+    background: url("/imgs/2018-ten-hours.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-2019{
+    background: url("/imgs/2019-ravioli.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-2021{
+    background: url("/imgs/2021-greg.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.cover-2022{
+    background: url("/imgs/2022-chaos.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-2023{
+    background: url("/imgs/2023-road.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cover-2018-small{
+    background: url("/imgs/2018-ten-hours.jpeg");
+}
+.cover-2019-small{
+    background: url("/imgs/2019-ravioli.jpeg");
+}
+.cover-2021-small{
+    background: url("/imgs/2021-greg.jpeg");
+}
+.cover-2022-small{
+    background: url("/imgs/2022-chaos.jpeg");
+}
+.cover-2023-small{
+    background: url("/imgs/2023-road.jpeg");
+}
+
+.mo-2018{
+    background: url("/imgs/making-of/2018-making-of.png");
+}
+
+.mo-2019{
+    background: url("/imgs/making-of/2019-making-of.png");
+}
+
+.mo-2021{
+    background: url("/imgs/making-of/2021-making-of.png");
+}
+
+.mo-2022{
+    background: url("/imgs/making-of/2022-making-of.png");
+}
+
+.mo-2023{
+    background: url("/imgs/making-of/2023-making-of.png");
+}
+
 .page-title{
     margin-bottom: 3vh;
     color: white;
     background-color: #080000;
     padding: 0 0.5em;
+    font-family: 'Anton-Regular';
+    font-weight: 400;
 }
 
 .page-title-outside-main-content{
@@ -70,6 +147,8 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(4px);
 }
 
 #player {
@@ -82,10 +161,79 @@ body {
     transition: 1s;
     border-radius: 20px;
     margin-bottom: 2.5px;
+
+    font-family: 'Anton-Regular';
+    font-size: larger;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    font-weight: 400;
+    font-family: 'Antonio-Regular';
 }
 
 .player-small:hover{
     scale: 1.02;
+    
+}
+
+.main-button{
+    text-decoration: none;
+    color: white;
+    background-size: auto 100%;
+    background-repeat: repeat;
+    background-position: 50% 0;
+}
+
+
+.main-button:hover {
+    animation: panAnimation 8s ease infinite;
+    animation-delay: 0s;
+}
+
+@keyframes panAnimation{
+    0%{
+        background-position: left;
+    }
+
+    50%{
+        background-position: right;
+    }
+
+    100%{
+        background-position: left;
+    }
+}
+
+button{
+    overflow: hidden;
+}
+
+#music-player-button-inner{
+    display: flex;
+    flex-direction: column;
+    justify-items: end;
+    overflow: hidden;
+
+}
+
+.music-player-button-inner-text{
+    width: 100%;
+    height: 100%;
+    bottom:0;
+    padding-bottom: 1em;
+
+    background-image: linear-gradient( to bottom, transparent, black);
+    background-size: 100% 30%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .player-fullscreen {
@@ -93,6 +241,7 @@ body {
     width: 100vw;
     transition: 1.5s;
     border-radius: 0px;
+    position: absolute;
 }
 
 .hidden {
@@ -119,6 +268,7 @@ body {
     margin-left: 2px;
     margin-right: 2px;
     background-color: #cccccc;
+    font-family: 'Antonio';
 }
 
 .panel-button:hover{
@@ -133,7 +283,7 @@ body {
     background-color: #ffffff;
 }
 
-h1{
+h1 h2 h3{
     color: white;
     text-align: center;
 }
@@ -191,6 +341,34 @@ footer>a:hover {
     font-family: 'Dekko-Regular';
     font-size: small;
     margin-right: 0.3em;
+}
+
+#music-player-button-inner{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #cccccc;
+    aspect-ratio: 1;
+    width: auto;
+}
+
+.decoration-video{
+    width: 50%;
+    visibility: visible;
+}
+
+.fullscreen-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right:0;
+    z-index: 2000;
+}
+
+.fullscreen-menu__button{
+    height:40px;
+    width:120px;
+    margin: 5px 10px 0 0;
 }
 
 @media screen and (max-width: 768px) {

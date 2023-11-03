@@ -81,60 +81,6 @@ body{
 }
 
 
-.cover-2018{
-    background: url("/imgs/2018-ten-hours.jpeg");
-    aspect-ratio: 1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.cover-2019{
-    background: url("/imgs/2019-ravioli.jpeg");
-    aspect-ratio: 1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.cover-2021{
-    background: url("/imgs/2021-greg.jpeg");
-    aspect-ratio: 1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
-}
-
-.cover-2022{
-    background: url("/imgs/2022-chaos.jpeg");
-    aspect-ratio: 1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.cover-2023{
-    background: url("/imgs/2023-road.jpeg");
-    aspect-ratio: 1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.cover-2018-small{
-    background: url("/imgs/2018-ten-hours.jpeg");
-}
-.cover-2019-small{
-    background: url("/imgs/2019-ravioli.jpeg");
-}
-.cover-2021-small{
-    background: url("/imgs/2021-greg.jpeg");
-}
-.cover-2022-small{
-    background: url("/imgs/2022-chaos.jpeg");
-}
-.cover-2023-small{
-    background: url("/imgs/2023-road.jpeg");
-}
-
 #music-player {
     display: flex;
     position: fixed;
