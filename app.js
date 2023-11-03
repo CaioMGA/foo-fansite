@@ -98,6 +98,8 @@ function SelectAlbum(year) {
     playerElement.classList.add("player-small");
     playerElement.classList.add("hidden");
 
+    document.getElementsByClassName("fullscreen-menu")[0].classList.add("hidden");
+
 }
 
 function UpdateBackground(year) {
