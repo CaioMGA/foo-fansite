@@ -18,9 +18,9 @@
     <div class="fullscreen-menu hidden">
       <button class="fullscreen-menu__button" onclick="ToggleFullscreenMenu();">Toggle Menu</button>
 
-      <button class="fullscreen-menu__button" onclick="PlayMakingOf();">🎥 Making of</button>
+      <button class="fullscreen-menu__button" onclick="ShowMakingOf();">🎥 Making of</button>
 
-      <button class="fullscreen-menu__button" onclick="PlaySpecial();">🌟 Special</button>
+      <button class="fullscreen-menu__button" onclick="ShowSpecial();">🌟 Special</button>
     </div>
     <div class="container__years">
       <button class="panel-button button-selected-year btn-2023" id="btn-2023" onclick="SelectAlbum(2023);">2023</button>
@@ -29,16 +29,18 @@
       <button class="panel-button btn-2019" id="btn-2019" onclick="SelectAlbum('2019');">2019</button>
       <button class="panel-button btn-2018" id="btn-2018" onclick="SelectAlbum('2018');">2018</button>
     </div>
-    <div id="player" class="player-small hidden"></div>
+    <div id="player" class="hidden"></div>
     <h1 class="page-title page-title-outside-main-content">First of October</h1>
     <div class="main-buttons-container">
       <h1 class="page-title page-title-inside-main-content">First of October</h1>
-      <button id="button-making-of" class="player-small main-button" onclick="ShowMakingOf();">
-      <p class="music-player-button-inner-text">🎥 Making of + 🌟 Special</p>
+      <button id="button-making-of" class="main-button" onclick="ShowMakingOf();"><p class="main-button-inner-text">🎥 Making of</p>
       </button>
-      
-      <a id="music-player-button" class="main-button" href="/music-player.html"><button class="player-small" id="music-player-button-inner">
-        <p class="music-player-button-inner-text">▶️ Music Player</p></button></a>
+
+      <button id="button-special" class="main-button" onclick="ShowSpecial();"><p class="main-button-inner-text">🌟 Special</p>
+      </button>
+
+      <button id="music-player-button" class="main-button" onclick="ShowMusicPlayer();"><p class="main-button-inner-text">▶️ Music Player</p>
+      </button>
     </div>
     <footer class="footer__regular footer__fixed"><a href="https://mysound.club">MySound<span class="club">.club</span></a> by Caio Amaral</footer>
     

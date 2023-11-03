@@ -91,11 +91,9 @@ function SelectAlbum(year) {
     UpdateYearButtons(year);
     albumId = year;
     localStorage.setItem("album-id", year);
-    loadPlaylist();
 
     var playerElement = document.getElementById("player");
     playerElement.classList.remove("player-fullscreen");
-    playerElement.classList.add("player-small");
     playerElement.classList.add("hidden");
 
     document.getElementsByClassName("fullscreen-menu")[0].classList.add("hidden");
@@ -106,7 +104,7 @@ function UpdateBackground(year) {
     console.log(year);
     var elem = document.getElementsByTagName("body")[0];
     var moButton = document.getElementById("button-making-of");
-    var musicPlayerButton = document.getElementById("music-player-button-inner");
+    var musicPlayerButton = document.getElementById("music-player-button");
     for (var y = 2018; y <= 2023; y++) {
         if (y == 2020) continue;
         if (year == y) {
@@ -123,7 +121,20 @@ function UpdateBackground(year) {
 
 function ShowMakingOf() {
     document.getElementById("player").classList.remove("hidden");
-    playerControls.seekTo(0);
+    playerControls.stopVideo();
+    playerControls.clearVideo();
+    playerControls.loadVideoById(videos[albumId].makingOf);
+}
+
+function ShowSpecial() {
+    document.getElementById("player").classList.remove("hidden");
+    playerControls.stopVideo();
+    playerControls.clearVideo();
+    playerControls.loadVideoById(videos[albumId].special);
+}
+
+function ShowMusicPlayer() {
+    window.location = "/music-player.html";
 }
 
 function UpdateYearButtons(year) {
@@ -156,6 +167,12 @@ function ShowMinimizedVideoLayout() {
     document.getElementsByClassName("main-buttons-container")[0].classList.remove("hidden");
 
     document.getElementsByTagName("footer")[0].classList.remove("hidden");
+
+    document.getElementById("player").classList.add("hidden");
+
+    playerControls.pauseVideo();
+    playerControls.clearVideo();
+
 }
 
 function ToggleFullscreenMenu() {
@@ -169,14 +186,4 @@ function ToggleFullscreenMenu() {
 function IsFullscreen() {
     var pl = document.getElementsByClassName("container__years")[0];
     return pl.classList.contains("hidden");
-}
-
-function PlayMakingOf() {
-    playerControls.playVideoAt(0);
-    playerControls.seekTo(0);
-}
-
-function PlaySpecial() {
-    playerControls.playVideoAt(1);
-    playerControls.seekTo(0);
 }
