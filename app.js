@@ -140,10 +140,6 @@ function ShowMusicPlayer() {
     window.location = "/music-player.html";
 }
 
-function ShowAbout() {
-    console.log("ABOUT FIRST OF OCTOBER AND ABOUT THIS SITE");
-}
-
 function UpdateYearButtons(year) {
     for (var y = 2018; y <= 2023; y++) {
         if (y == 2020) continue;
@@ -201,4 +197,27 @@ function ToggleFullscreenMenu() {
 function IsFullscreen() {
     var pl = document.getElementsByClassName("container__years")[0];
     return pl.classList.contains("hidden");
+}
+
+function ShowAboutPanel() {
+    document.getElementById("about-container").classList.remove("hidden");
+    console.log("Show about");
+
+}
+
+function HideAboutPanel() {
+    console.log("Hide about")
+    document.getElementById("about-container").classList.add("hidden");
+}
+
+function OpenMerchLink() {
+    window.open("https://store.dftba.com/collections/rob-scallon");
+}
+
+function ShowContactPanel() {
+    document.getElementById("contact-container").classList.remove("hidden");
+}
+
+function HideContactPanel() {
+    document.getElementById("contact-container").classList.add("hidden");
 }

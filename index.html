@@ -20,7 +20,10 @@
       <button class="fullscreen-menu__button" onclick="ToggleFullscreenMenu();">Toggle Menu</button>
       <button class="fullscreen-menu__button" onclick="ShowMakingOf();">🎥 Making of</button>
       <button class="fullscreen-menu__button" onclick="ShowSpecial();">🌟 Special</button>
-      <button class="fullscreen-menu__button" onclick="ShowAbout();">❔ About</button>
+      <button class="fullscreen-menu__button" onclick="ShowAboutPanel();">❔ About</button>
+      <button class="fullscreen-menu__button" onclick="ShowContactPanel();">✉️ Contact</button>
+
+      
     </div>
     <div class="container__years">
         <button class="panel-button button-selected-year btn-2023" id="btn-2023" onclick="SelectAlbum(2023);">2023</button>
@@ -43,10 +46,43 @@
         <button id="music-player-button" class="main-button" onclick="ShowMusicPlayer();"><p class="main-button-inner-text">▶️ Music Player</p>
         </button>
 
-        <button id="about-button" class="main-button" onclick="ShowAbout();"><p class="main-button-inner-text">❔ About</p>
+        <button id="about-button" class="main-button" onclick="ShowAboutPanel();"><p class="main-button-inner-text">❔ About</p>
         </button>
+
+        <button class="main-button extra-button extra-button-merch"><p class="main-button-inner-text" onclick="OpenMerchLink();">💽 Merch</p></button>
+        <button class="main-button extra-button extra-button-contact"><p class="main-button-inner-text" onclick="ShowContactPanel();">✉️ Contact</p></button>
       </div>
       <footer class="footer__regular footer__fixed"><a href="https://mysound.club">MySound<span class="club">.club</span></a> by Caio Amaral</footer>
+    </div>
+    <div id="about-container" class="extra-container hidden">
+      <div class="extra-container-panel">
+        <h2 class="about-content-title">About</h2>
+
+        <h3 class="about-content-subtitle">About the band</h3>
+        <p class="about-content-text"></p>Every year since 2018 (except 2020 due to Covid restrictions), on October 1st, <span class="strong">Andrew Huang</span> and <span class="strong">Rob Scallon</span> try to record an album in a day. They compose, perform and record all songs from said album in a single day. To be more precise, they do all that in 12 hours.</p>
+
+        <h3 class="about-content-subtitle">About the site</h3>
+        <p class="about-content-text"></p>Fan-site created as a hommage to <span class="strong"></span>First of October</span>.</p>
+        <p class="about-content-text">This site does not use any JavaScript framework. The audio and video shown in the site are from Youtube due to its convenience (it's free, available worldwide, and fast). The site is self-hosted</p>
+        <p class="about-content-text">I decided to create this site because this is the only band I look forward to their next album every year.</p>
+
+        <button class="close-button" onclick="HideAboutPanel();">
+          X
+        </button>
+      </div>
+    </div>
+
+    <div id="contact-container" class="extra-container hidden">
+      <div class="extra-container-panel">
+        <h2 class="about-content-title">Contact</h2>
+
+        <h3 class="about-content-subtitle">Caio Amaral</h3>
+        <a class="about-content-text" href="mailto:caiomga@gmail.com">caiomga@gmail.com</a>
+
+        <button class="close-button" onclick="HideContactPanel();">
+          X
+        </button>
+      </div>
     </div>
   </body>
 </html>
