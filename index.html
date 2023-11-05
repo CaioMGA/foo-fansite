@@ -16,13 +16,14 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div class="fullscreen-menu">
-      <button class="fullscreen-menu__button" onclick="ToggleFullscreenMenu();">Toggle Menu</button>
-      <button class="fullscreen-menu__button" onclick="ShowMakingOf();">🎥 Making of</button>
-      <button class="fullscreen-menu__button" onclick="ShowSpecial();">🌟 Special</button>
-      <button class="fullscreen-menu__button" onclick="ShowAboutPanel();">❔ About</button>
-      <button class="fullscreen-menu__button" onclick="ShowContactPanel();">✉️ Contact</button>
-
+    <div id="fullscreen-menu" class="fullscreen-menu hidden">
+      <div class="fullscreen-menu-content">
+        <button class="fullscreen-menu__button" onclick="ToggleFullscreenMenu();">Toggle Menu</button>
+        <button class="fullscreen-menu__button" onclick="ShowMakingOf();">🎥 Making of</button>
+        <button class="fullscreen-menu__button" onclick="ShowSpecial();">🌟 Special</button>
+        <button class="fullscreen-menu__button" onclick="ShowAboutPanel();">❔ About</button>
+        <button class="fullscreen-menu__button" onclick="ShowContactPanel();">✉️ Contact</button>
+      </div>
       
     </div>
     <div class="container__years">

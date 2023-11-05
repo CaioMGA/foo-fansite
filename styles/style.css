@@ -442,7 +442,16 @@ footer>a:hover {
     display: flex;
     flex-direction: column;
     right:0;
+    top:0;
     z-index: 2000;
+}
+
+.fullscreen-menu-content{
+    display: flex;
+    justify-content:center ;
+    padding-left: 1vw;
+    height: 100vh;
+    flex-direction: column;
 }
 
 .fullscreen-menu__button{

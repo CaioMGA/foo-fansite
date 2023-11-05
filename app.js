@@ -2,7 +2,12 @@ var playerControls;
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 var playlist = [];
+var isPlaying = false;
 var albumId = "2023";
+var hideTimer;
+window.addEventListener('mousemove', ResetTimer);
+document.addEventListener('keypress', ResetTimer);
+ResetTimer();
 var videos = {
     "2018": { "makingOf": "-QT0Bvf2FIQ", "special": "ZYnsuCt3vLI" },
     "2019": { "makingOf": "qonY5BP_vR8", "special": "6ZIogYd0gSo" },
@@ -41,12 +46,13 @@ function onPlayerReady(event) {
 //    the player should play for six seconds and then stop.
 var done = false;
 function onPlayerStateChange(event) {
-    if (event.data == 0) {
+    if (event.data == 0) { //not playing
         console.log("TERMINOU!");
         // TODO: suggest a new video
     }
 
-    if (event.data == 1) {
+    if (event.data == 1) { // playing
+        ShowFullscreenMenu();
         var player = document.getElementById("player")
         player.classList.add("player-fullscreen");
         player.classList.remove("player-small");
@@ -63,6 +69,10 @@ function onPlayerStateChange(event) {
         }
 
         ShowPlayerOnly();
+    }
+
+    if (event.data == 2) { //Paused
+        ShowFullscreenMenu();
     }
 }
 function stopVideo() {
@@ -153,6 +163,7 @@ function UpdateYearButtons(year) {
 }
 
 function ShowPlayerOnly() {
+    isPlaying = true;
     document.getElementsByClassName("container__years")[0].classList.add("hidden");
 
     document.getElementsByClassName("main-buttons-container")[0].classList.add("hidden");
@@ -169,6 +180,7 @@ function ShowPlayerOnly() {
 }
 
 function ShowMinimizedVideoLayout() {
+    isPlaying = false;
     document.getElementsByClassName("container__years")[0].classList.remove("hidden");
 
     document.getElementsByClassName("main-buttons-container")[0].classList.remove("hidden");
@@ -220,4 +232,19 @@ function ShowContactPanel() {
 
 function HideContactPanel() {
     document.getElementById("contact-container").classList.add("hidden");
+}
+
+function HideFullscreenMenu() {
+    document.getElementsByClassName("fullscreen-menu-content")[0].classList.add("hidden");
+}
+
+function ShowFullscreenMenu() {
+    if (!isPlaying) return;
+    document.getElementsByClassName("fullscreen-menu-content")[0].classList.remove("hidden");
+}
+
+function ResetTimer() {
+    clearTimeout(hideTimer);
+    ShowFullscreenMenu();
+    hideTimer = setTimeout(HideFullscreenMenu, 2000);
 }
