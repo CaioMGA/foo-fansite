@@ -413,7 +413,8 @@ footer>a{
     font-style: normal;
     font-family: 'Antonio';
     font-weight: 400;
-    text-decoration: none;
+    text-decoration: underline;
+    margin-left: 0.5rem;
 }
 
 footer>a:hover {
