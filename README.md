@@ -1,7 +1,7 @@
 # First of October - fansite
 
 ![foo-print-screen](https://github.com/CaioMGA/foo-fansite/assets/2707567/613aa42d-32a1-4c4d-9e6e-d1e6281a4323)
-![foo-fansite-player](https://github.com/CaioMGA/foo-fansite/assets/2707567/de05b0f3-b829-4a51-ac04-17ef7a651499)
+![foo-fansite-player](https://github.com/CaioMGA/foo-fansite/assets/2707567/56433922-eeac-4be3-817e-d79c7b4293a6)
 
 ## About the band
 Every year since 2018 (except 2020 due to Covid restrictions), on October 1st, Andrew Huang and Rob Scallon try to record an album in one day. They compose, perform and record all songs from said album in a single day. To be more precise, they do all that in 12 hours.
@@ -14,7 +14,7 @@ This site does not use any JavaScript framework. The audio and video shown in th
 I decided to create this site because this is the only band I look forward to their next album every year.
 
 ## Contact
-Caio Amaral - Web Developer
+Caio Amaral - Web Designer / Web Developer
 caiomga@gmail.com
 
 
@@ -23,4 +23,3 @@ https://www.instagram.com/andrewismusic/
 
 Rob Scallon - First of October
 https://www.instagram.com/robscallon/
-
