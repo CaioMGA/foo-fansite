@@ -14,7 +14,7 @@ This site does not use any JavaScript framework. The audio and video shown in th
 I decided to create this site because this is the only band I look forward to their next album every year.
 
 ## Contact
-Caio Amaral - Dev
+Caio Amaral - Web Developer
 caiomga@gmail.com
 
 
