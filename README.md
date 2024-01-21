@@ -11,3 +11,14 @@ Fan-site created as a hommage to First of October.
 This site does not use any JavaScript framework. The audio and video shown in the site are from Youtube due to its convenience (it's free, available worldwide, and fast). The site is self-hosted
 
 I decided to create this site because this is the only band I look forward to their next album every year.
+
+## Contact
+Caio Amaral - Dev
+caiomga@gmail.com
+
+
+Andrew Hwang - First of October
+https://www.instagram.com/andrewismusic/
+
+Rob Scallon - First of October
+https://www.instagram.com/robscallon/
