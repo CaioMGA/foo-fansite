@@ -91,7 +91,7 @@ function loadPlaylist() {
 function Init() {
     albumId = localStorage.getItem("album-id");
     if (albumId == null) {
-        albumId = new Date().getFullYear();
+        albumId = Math.max(...Object.getOwnPropertyNames(videos)); //gets the biggest year registered on videos array
     }
     SelectAlbum(albumId);
 }

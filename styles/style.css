@@ -347,8 +347,11 @@ button{
     margin-bottom: 6px;
     margin-left: 2px;
     margin-right: 2px;
-    background-color: #cccccc;
+    /* background-color: #cccccc; */
+    background-color: #000;
+    color: #cccccc;
     font-family: 'Antonio';
+    border-radius: 8px 0 0 8px;
 }
 
 .panel-button:hover{
@@ -360,7 +363,8 @@ button{
     pointer-events: none;
     cursor: pointer;
 
-    background-color: #ffffff;
+    background-color: #222;
+    color: #cccccc;
 }
 
 h1 h2 h3{
@@ -475,34 +479,43 @@ footer>a:hover {
 .extra-container-panel{
     position: absolute;
     width: 600px;
-    height: auto;
+    max-height: 80vh;
     background-color: #080000;
     color: white;
     padding:40px 80px;
     border-radius: 20px;
     z-index: 3000;
 }
+.extra-container-panel {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 .about-content-title{
     margin-bottom: 10px;
+    font-size: 3rem;
 }
 
 .about-content-subtitle{
     margin-top:30px;
     margin-bottom:10px;
+    font-size: 2rem;
 }
 
 .about-content-text{
     color: white;
+    font-size: 1.5rem;
 }
 
 .close-button{
     position: absolute;
-    top:-1em;
-    right:-1em;
+    top:1em;
+    right:1em;
+    margin-bottom: auto;
+    margin-left: auto;
     width:3em;
     height: 3em;
-    border-radius: 1000px;
+    border-radius: 50%;
     font-weight: 700;
 }
 
@@ -582,6 +595,10 @@ footer>a:hover {
         align-items: end;
         width: 100%;
         justify-content: center;
+    }
+
+    .panel-button {
+        border-radius: 8px 8px 0 0;
     }
 
     .main-content{
@@ -665,6 +682,6 @@ footer>a:hover {
 
     .about-content-text{
         color: white;
-        font-size: small;
+        font-size: large;
     }
 }
