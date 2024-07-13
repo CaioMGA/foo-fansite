@@ -76,6 +76,19 @@ var albums = {
         { "id": "9kNjtkVjsYs", "title": "Sunlight, Sunlight" },
         { "id": "SasQXLx-Av0", "title": "Make It Through the Night" },
         { "id": "e53-p_mIt7g", "title": "Live Out Loud" }
+    ],
+    "2024": [
+        {"name": "TBA", "year":"2024", "cover":"2024/album-cover.jpeg"},
+        { "id": "IMoS9nT8qrU", "title": "Dan B. - C.H.A.D.'s Broken Wind" },
+        { "id": "0kQ7YugllNQ", "title": "Tom Leher - Poisoning Pidgeons in the Park" },
+        { "id": "DstIlngjlw4", "title": "DZ Deathrays - Like People" },
+        { "id": "TgTJtdn6VjM", "title": "Dinosaur Jr - Over it" },
+        { "id": "U0MXZ_WXtsM", "title": "Zero Ranger - It May Be Greenish" },
+        { "id": "B3SSPURxGJ0", "title": "Mando Diao - Dance With Somebody" },
+        { "id": "UL7GHN6dC64", "title": "The Pack A.D. - Everyone Looks Like Everyone" },
+        { "id": "ils4OOFkNtI", "title": "Barry Leitch - Retro Race" },
+        { "id": "koaAAGYmiYk", "title": "Mega Driver - Eye of the Jaguar" },
+        { "id": "9OG9neIrmHA", "title": "Vestron Vulture - New Age Hookers (Essen Remix)" }
     ]
 }
 var playlist = [];

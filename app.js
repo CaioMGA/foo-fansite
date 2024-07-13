@@ -1,3 +1,4 @@
+const MOST_RECENT_YEAR = 2024
 var playerControls;
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
@@ -14,6 +15,7 @@ var videos = {
     "2021": { "makingOf": "gDoVGhOrM28", "special": "pm2JcAwSPG8" },
     "2022": { "makingOf": "-qgiguUuhpM", "special": "BSpZWIuiats" },
     "2023": { "makingOf": "G4-LjYf5pbY", "special": "maZoTHkRYuI" },
+    "2024": { "makingOf": "7H0--80KRUM", "special": "olORq9nrPns" },
 };
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -116,7 +118,7 @@ function UpdateBackground(year) {
     var moButton = document.getElementById("button-making-of");
     var spButton = document.getElementById("button-special");
     var musicPlayerButton = document.getElementById("music-player-button");
-    for (var y = 2018; y <= 2023; y++) {
+    for (var y = 2018; y <= MOST_RECENT_YEAR; y++) {
         if (y == 2020) continue;
         if (year == y) {
             elem.classList.add("body-" + y);
@@ -151,7 +153,7 @@ function ShowMusicPlayer() {
 }
 
 function UpdateYearButtons(year) {
-    for (var y = 2018; y <= 2023; y++) {
+    for (var y = 2018; y <= MOST_RECENT_YEAR; y++) {
         if (y == 2020) continue;
         var elem = document.getElementById("btn-" + y);
         if (year == y) {

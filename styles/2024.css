@@ -1,0 +1,5 @@
+.body-2024 {
+    background-image: url("../imgs/2024/album-cover.jpeg");
+    transition: background-image 0.5s ease-in-out;
+    transition-delay: 0.1s;
+}

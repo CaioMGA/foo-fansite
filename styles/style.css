@@ -50,6 +50,7 @@ body {
     flex-direction: column;
 }
 
+/* #region 2018 */
 .cover-2018{
     background: url("/imgs/2018/album-cover.jpeg");
     aspect-ratio: 1;
@@ -57,6 +58,18 @@ body {
     background-position: center;
     background-size: cover;
 }
+.cover-2018-small{
+    background: url("/imgs/2018/album-cover.jpeg");
+}
+.mo-2018{
+    background: url("/imgs/2018/making-of.png");
+}
+.sp-2018{
+    background: url("/imgs/2018/special.png");
+}
+
+/* #endregion */
+/* #region 2019 */
 .cover-2019{
     background: url("/imgs/2019/album-cover.jpeg");
     aspect-ratio: 1;
@@ -64,15 +77,35 @@ body {
     background-position: center;
     background-size: cover;
 }
+.cover-2019-small{
+    background: url("/imgs/2019/album-cover.jpeg");
+}
+.mo-2019{
+    background: url("/imgs/2019/making-of.png");
+}
+.sp-2019{
+    background: url("/imgs/2019/special.png");
+}
+/* #endregion */
+/* #region 2021 */
 .cover-2021{
     background: url("/imgs/2021/album-cover.jpeg");
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
 }
-
+.cover-2021-small{
+    background: url("/imgs/2021/album-cover.jpeg");
+}
+.mo-2021{
+    background: url("/imgs/2021/making-of.png");
+}
+.sp-2021{
+    background: url("/imgs/2021/special.png");
+}
+/* #endregion */
+/* #region 2022 */
 .cover-2022{
     background: url("/imgs/2022/album-cover.jpeg");
     aspect-ratio: 1;
@@ -80,6 +113,17 @@ body {
     background-position: center;
     background-size: cover;
 }
+.cover-2022-small{
+    background: url("/imgs/2022/album-cover.jpeg");
+}
+.mo-2022{
+    background: url("/imgs/2022/making-of.png");
+}
+.sp-2022{
+    background: url("/imgs/2022/special.png");
+}
+/* #endregion */
+/* #region 2023 */
 .cover-2023{
     background: url("/imgs/2023/album-cover.jpeg");
     aspect-ratio: 1;
@@ -87,62 +131,34 @@ body {
     background-position: center;
     background-size: cover;
 }
-
-.cover-2018-small{
-    background: url("/imgs/2018/album-cover.jpeg");
-}
-.cover-2019-small{
-    background: url("/imgs/2019/album-cover.jpeg");
-}
-.cover-2021-small{
-    background: url("/imgs/2021/album-cover.jpeg");
-}
-.cover-2022-small{
-    background: url("/imgs/2022/album-cover.jpeg");
-}
 .cover-2023-small{
     background: url("/imgs/2023/album-cover.jpeg");
 }
-
-.mo-2018{
-    background: url("/imgs/2018/making-of.png");
-}
-
-.mo-2019{
-    background: url("/imgs/2019/making-of.png");
-}
-
-.mo-2021{
-    background: url("/imgs/2021/making-of.png");
-}
-
-.mo-2022{
-    background: url("/imgs/2022/making-of.png");
-}
-
 .mo-2023{
     background: url("/imgs/2023/making-of.png");
 }
-
-.sp-2018{
-    background: url("/imgs/2018/special.png");
-}
-
-.sp-2019{
-    background: url("/imgs/2019/special.png");
-}
-
-.sp-2021{
-    background: url("/imgs/2021/special.png");
-}
-
-.sp-2022{
-    background: url("/imgs/2022/special.png");
-}
-
 .sp-2023{
     background: url("/imgs/2023/special.png");
 }
+/* #endregion */
+/* #region 2024 */
+.cover-2024{
+    background: url("/imgs/2024/album-cover.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-2024-small{
+    background: url("/imgs/2024/album-cover.jpeg");
+}
+.mo-2024{
+    background: url("/imgs/2024/making-of.png");
+}
+.sp-2024{
+    background: url("/imgs/2024/special.png");
+}
+/* #endregion */
 
 .page-title{
     margin: 0 5vw 3vh 5vw;
