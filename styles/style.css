@@ -51,21 +51,21 @@ body {
 }
 
 .cover-2018{
-    background: url("/imgs/2018-ten-hours.jpeg");
+    background: url("/imgs/2018/album-cover.jpeg");
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .cover-2019{
-    background: url("/imgs/2019-ravioli.jpeg");
+    background: url("/imgs/2019/album-cover.jpeg");
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .cover-2021{
-    background: url("/imgs/2021-greg.jpeg");
+    background: url("/imgs/2021/album-cover.jpeg");
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
@@ -74,14 +74,14 @@ body {
 }
 
 .cover-2022{
-    background: url("/imgs/2022-chaos.jpeg");
+    background: url("/imgs/2022/album-cover.jpeg");
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .cover-2023{
-    background: url("/imgs/2023-road.jpeg");
+    background: url("/imgs/2023/album-cover.jpeg");
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,59 +89,59 @@ body {
 }
 
 .cover-2018-small{
-    background: url("/imgs/2018-ten-hours.jpeg");
+    background: url("/imgs/2018/album-cover.jpeg");
 }
 .cover-2019-small{
-    background: url("/imgs/2019-ravioli.jpeg");
+    background: url("/imgs/2019/album-cover.jpeg");
 }
 .cover-2021-small{
-    background: url("/imgs/2021-greg.jpeg");
+    background: url("/imgs/2021/album-cover.jpeg");
 }
 .cover-2022-small{
-    background: url("/imgs/2022-chaos.jpeg");
+    background: url("/imgs/2022/album-cover.jpeg");
 }
 .cover-2023-small{
-    background: url("/imgs/2023-road.jpeg");
+    background: url("/imgs/2023/album-cover.jpeg");
 }
 
 .mo-2018{
-    background: url("/imgs/making-of/2018-making-of.png");
+    background: url("/imgs/2018/making-of.png");
 }
 
 .mo-2019{
-    background: url("/imgs/making-of/2019-making-of.png");
+    background: url("/imgs/2019/making-of.png");
 }
 
 .mo-2021{
-    background: url("/imgs/making-of/2021-making-of.png");
+    background: url("/imgs/2021/making-of.png");
 }
 
 .mo-2022{
-    background: url("/imgs/making-of/2022-making-of.png");
+    background: url("/imgs/2022/making-of.png");
 }
 
 .mo-2023{
-    background: url("/imgs/making-of/2023-making-of.png");
+    background: url("/imgs/2023/making-of.png");
 }
 
 .sp-2018{
-    background: url("/imgs/special/2018.png");
+    background: url("/imgs/2018/special.png");
 }
 
 .sp-2019{
-    background: url("/imgs/special/2019.png");
+    background: url("/imgs/2019/special.png");
 }
 
 .sp-2021{
-    background: url("/imgs/special/2021.png");
+    background: url("/imgs/2021/special.png");
 }
 
 .sp-2022{
-    background: url("/imgs/special/2022.png");
+    background: url("/imgs/2022/special.png");
 }
 
 .sp-2023{
-    background: url("/imgs/special/2023.png");
+    background: url("/imgs/2023/special.png");
 }
 
 .page-title{

@@ -10,7 +10,7 @@ var albums = {
     //2 second video for testing
     // { "id": "TK4N5W22Gts", "title": "TEST" },
     "2018": [
-        { "name": "Ten Hours", "year": "2018", "cover": "2018-ten-hours.jpeg" },
+        { "name": "Ten Hours", "year": "2018", "cover": "2018/album-cover.jpeg" },
         { "id": "mIx9jBsWCOE", "title": "Woo!" },
         { "id": "X04DiwpTI2M", "title": "Can't Be Stopped" },
         { "id": "1fDrVDgUWLc", "title": "Two Friends" },
@@ -24,7 +24,7 @@ var albums = {
 
     ],
     "2019": [
-        { "name": "Gourmet Ravioli", "year": "2019", "cover": "cover-2019-ravioli.jpeg" },
+        { "name": "Gourmet Ravioli", "year": "2019", "cover": "2019/album-cover.jpeg" },
         { "id": "KMp5dOdyFaY", "title": "First of October" },
         { "id": "pppkzGTvJC0", "title": "Coffee! Yeah!" },
         { "id": "0m-wBGGIBPo", "title": "Ravioli" },
@@ -38,7 +38,7 @@ var albums = {
 
     ],
     "2021": [
-        { "name": "Gotta Record Everything Good", "year": "2021", "cover": "2021-greg.jpeg" },
+        { "name": "Gotta Record Everything Good", "year": "2021", "cover": "2021/album-cover.jpeg" },
         { "id": "2iKDK05xLXE", "title": "Miracle" },
         { "id": "aIoRpSqfCIU", "title": "Feels So Right" },
         { "id": "CxM6203NQ7w", "title": "Bookmobile" },
@@ -52,7 +52,7 @@ var albums = {
         { "id": "YtBswv40Gxo", "title": "The 11th Song" }
     ],
     "2022": [
-        { "name": "CHAOS", "year": "2022", "cover": "2022-chaos.jpeg" },
+        { "name": "CHAOS", "year": "2022", "cover": "2022/album-cover.jpeg" },
         { "id": "bPaWa1wuJrI", "title": "Spooky Time" },
         { "id": "2of8Sry8WtE", "title": "Headless" },
         { "id": "PhaQIGf-VzE", "title": "Good Enough" },
@@ -65,7 +65,7 @@ var albums = {
         { "id": "B8XpIhphbhY", "title": "Find The Way" }
     ],
     "2023": [
-        { "name": "Across the Road", "year": "2023", "cover": "2023-road.jpeg" },
+        { "name": "Across the Road", "year": "2023", "cover": "2023/album-cover.jpeg" },
         { "id": "dHCdtWlyGfI", "title": "Across The Road" },
         { "id": "5_JIxR7mie0", "title": "Abby Rowed" },
         { "id": "8md5Wp9nkMA", "title": "It's Good to be Back" },
