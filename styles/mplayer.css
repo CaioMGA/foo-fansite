@@ -1,5 +1,6 @@
 body{
     background-color: #080000;
+    overflow: hidden;
 }
 
 .left-panel {
@@ -19,12 +20,14 @@ body{
     justify-content: center;
     background-position: center;
     background-size: contain;
+    height: 60dvh;
 }
 
 .controls {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 15dvh;
 
 }
 
@@ -41,7 +44,7 @@ body{
     border-radius: 8px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 60%;
     background-position: center;
 }
 .control-button:hover{
@@ -112,7 +115,7 @@ body{
 }
 
 #song-info{
-    height: auto;
+    height: 10dvh;
     width: auto;
 }
 #song-info>p{
@@ -120,6 +123,12 @@ body{
     text-align: center;
     margin: 10px;
 
+}
+
+#album-list>h1 {
+    background-color: #080000;
+    color: #ffe1e1;
+    padding: .4rem 1rem;
 }
 
 .progress__song{
@@ -146,7 +155,8 @@ body{
     justify-content: stretch;
     align-items: center;
     text-align: center;
-    margin-top:1em;
+    /* margin-top:1em; */
+    height: 10dvh;
 }
 
 .song-time{
@@ -233,8 +243,10 @@ body{
         display: block;
         position: fixed;
         width: 100vw;
-        top:1em;
-        background-image: linear-gradient(to top, transparent, #080000);
+        top: 1rem;
+        background-image: linear-gradient(to bottom, #080000 50%, #08000000 100%);
+      
+
     }
 
     .close-button{
