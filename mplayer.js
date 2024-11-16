@@ -78,17 +78,18 @@ var albums = {
         { "id": "e53-p_mIt7g", "title": "Live Out Loud" }
     ],
     "2024": [
-        {"name": "TBA", "year":"2024", "cover":"2024/album-cover.jpeg"},
-        { "id": "IMoS9nT8qrU", "title": "Dan B. - C.H.A.D.'s Broken Wind" },
-        { "id": "0kQ7YugllNQ", "title": "Tom Leher - Poisoning Pidgeons in the Park" },
-        { "id": "DstIlngjlw4", "title": "DZ Deathrays - Like People" },
-        { "id": "TgTJtdn6VjM", "title": "Dinosaur Jr - Over it" },
-        { "id": "U0MXZ_WXtsM", "title": "Zero Ranger - It May Be Greenish" },
-        { "id": "B3SSPURxGJ0", "title": "Mando Diao - Dance With Somebody" },
-        { "id": "UL7GHN6dC64", "title": "The Pack A.D. - Everyone Looks Like Everyone" },
-        { "id": "ils4OOFkNtI", "title": "Barry Leitch - Retro Race" },
-        { "id": "koaAAGYmiYk", "title": "Mega Driver - Eye of the Jaguar" },
-        { "id": "9OG9neIrmHA", "title": "Vestron Vulture - New Age Hookers (Essen Remix)" }
+        {"name": "Round 6", "year":"2024", "cover":"2024/album-cover.jpeg"},
+        { "id": "oQZ-gYk5Th0", "title": "Start!" },
+        { "id": "EWcik3HMwaE", "title": "Round 6" },
+        { "id": "Dbe58jAt7C8", "title": "Dungeoun Man" },
+        { "id": "BBZpSPkjRys", "title": "Day Old Milk" },
+        { "id": "uNt41oLNhOk", "title": "Final Boss" },
+        { "id": "hh7Q2Dm4rHo", "title": "Infinite Lives" },
+        { "id": "jlBnWxufs08", "title": "Same Old Game" },
+        { "id": "3JcRXj3r_iQ", "title": "I Am a Full Grown Man and I'm Wearing a Retainer" },
+        { "id": "PshWLo0MMns", "title": "Let's Fight!" },
+        { "id": "J8o0Z9Vp258", "title": "Infinite Knives" },
+        { "id": "KZCUyYlASw8", "title": "It's Time to Move On" }
     ]
 }
 var playlist = [];
