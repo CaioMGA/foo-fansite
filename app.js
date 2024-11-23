@@ -9,6 +9,7 @@ var hideTimer;
 window.addEventListener('mousemove', ResetTimer);
 document.addEventListener('keypress', ResetTimer);
 ResetTimer();
+const albumIdList = ["2018", "2019", "2021", "2022", "2023", "2024"];
 var videos = {
     "2018": { "makingOf": "-QT0Bvf2FIQ", "special": "ZYnsuCt3vLI" },
     "2019": { "makingOf": "qonY5BP_vR8", "special": "6ZIogYd0gSo" },
@@ -92,7 +93,8 @@ function loadPlaylist() {
 //----------------------------------------------------------
 function Init() {
     albumId = localStorage.getItem("album-id");
-    if (albumId == null) {
+    console.log(albumIdList.indexOf(albumId) < 0);
+    if (albumId == null || albumIdList.indexOf(albumId) < 0) {
         albumId = Math.max(...Object.getOwnPropertyNames(videos)); //gets the biggest year registered on videos array
     }
     SelectAlbum(albumId);

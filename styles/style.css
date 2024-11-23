@@ -160,6 +160,46 @@ body {
 }
 /* #endregion */
 
+/* #region Playlist Funny */
+.cover-funny{
+    background: url("/imgs/msc/playlist-cover-funny.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-funny-small{
+    background: url("/imgs/msc/playlist-cover-funny.jpeg");
+}
+.mo-funny{
+    background: url("/imgs/msc/playlist-cover-funny.png");
+}
+.sp-funny{
+    background: url("/imgs/msc/playlist-cover-funny");
+}
+
+/* #endregion */
+
+/* #region Playlist Editor Pickk */
+.cover-editors-picks{
+    background: url("/imgs/msc/playlist-cover-editors-picks.jpeg");
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cover-editors-picks-small{
+    background: url("/imgs/msc/playlist-cover-editors-picks.jpeg");
+}
+.mo-editors-picks{
+    background: url("/imgs/msc/playlist-cover-editors-picks.png");
+}
+.sp-editors-picks{
+    background: url("/imgs/msc/playlist-cover-editors-picks");
+}
+
+/* #endregion */
+
 .page-title{
     margin: 0 5vw 3vh 5vw;
     color: white;

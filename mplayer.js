@@ -90,6 +90,27 @@ var albums = {
         { "id": "PshWLo0MMns", "title": "Let's Fight!" },
         { "id": "J8o0Z9Vp258", "title": "Infinite Knives" },
         { "id": "KZCUyYlASw8", "title": "It's Time to Move On" }
+    ],
+    "funny": [
+        {"name": "Funny Playlist", "year":"2024", "cover":"msc/playlist-cover-funny.jpeg"},
+        { "id": "1fDrVDgUWLc", "title": "Two Friends", "year": "2018"},
+        { "id": "BbVH6oiRzQo", "title": "Don't Go to My House", "year": "2018"},
+        { "id": "s4wkwJBY_Jw", "title": "Thirty-First of October", "year": "2019"},
+        { "id": "fz6MLi3y0Ig", "title": "I Am Not Afraid", "year": "2021"},
+        { "id": "GsnkJPk38xc", "title": "Trick or Treat", "year": "2021"},
+        { "id": "Tr3Qr1aoA6A", "title": "Left My Pants in Chicago", "year": "2022"},
+        { "id": "5_JIxR7mie0", "title": "Abby Rowed", "year": "2023"},
+        { "id": "SasQXLx-Av0", "title": "Make It Through the Night", "year": "2023"},
+        { "id": "3JcRXj3r_iQ", "title": "I Am a Full Grown Man and I'm Wearing a Retainer", "year": "2024"},
+    ],
+    "editors-picks": [
+        {"name": "Editor Picks", "year":"2024", "cover":"msc/playlist-cover-editors-picks.jpeg"},
+        { "id": "BbVH6oiRzQo", "title": "Don't Go to My House", "year": "2018"},
+        { "id": "fMVkI8v75_c", "title": "October 1", "year":"2019" },
+        { "id": "fz6MLi3y0Ig", "title": "I Am Not Afraid", "year":"2021"  },
+        { "id": "HQKRNOVO7LY", "title": "Jangly Bones", "year":"2022" },
+        { "id": "9kNjtkVjsYs", "title": "Sunlight, Sunlight", "year":"2023" },
+        { "id": "BBZpSPkjRys", "title": "Day Old Milk", "year":"2024" },
     ]
 }
 var playlist = [];
