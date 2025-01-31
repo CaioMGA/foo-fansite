@@ -1,105 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/2018.css">
-    <link rel="stylesheet" type="text/css" href="styles/2019.css">
-    <link rel="stylesheet" type="text/css" href="styles/2021.css">
-    <link rel="stylesheet" type="text/css" href="styles/2022.css">
-    <link rel="stylesheet" type="text/css" href="styles/2023.css">
-    <link rel="stylesheet" type="text/css" href="styles/2024.css">
 
-    <link rel="icon" type="image/x-icon" ref="favicon.ico">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/2018.css">
+  <link rel="stylesheet" type="text/css" href="styles/2019.css">
+  <link rel="stylesheet" type="text/css" href="styles/2021.css">
+  <link rel="stylesheet" type="text/css" href="styles/2022.css">
+  <link rel="stylesheet" type="text/css" href="styles/2023.css">
+  <link rel="stylesheet" type="text/css" href="styles/2024.css">
 
-    <title>First of October - fansite</title>
-    <script src="app.js"></script>
-  </head>
-  <body>
-    <div id="fullscreen-menu" class="fullscreen-menu hidden">
-      <div class="fullscreen-menu-content">
-        <button class="fullscreen-menu__button" onclick="ToggleFullscreenMenu();">Toggle Menu</button>
-        <button class="fullscreen-menu__button" onclick="ShowMakingOf();">🎥 Making of</button>
-        <button class="fullscreen-menu__button" onclick="ShowSpecial();">🌟 Special</button>
-        <button class="fullscreen-menu__button" onclick="ShowAboutPanel();">❔ About</button>
-        <button class="fullscreen-menu__button" onclick="ShowContactPanel();">✉️ Contact</button>
-      </div>
-      
+  <link rel="icon" type="image/x-icon" ref="favicon.ico">
+
+  <title>First of October - fansite</title>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div id="fullscreen-menu" class="fullscreen-menu hidden">
+    <div class="fullscreen-menu-content">
+      <button class="fullscreen-menu__button" onclick="ToggleFullscreenMenu();">Toggle Menu</button>
+      <button class="fullscreen-menu__button" onclick="ShowMakingOf();">🎥 Making of</button>
+      <button class="fullscreen-menu__button" onclick="ShowSpecial();">🌟 Special</button>
+      <button class="fullscreen-menu__button" onclick="ShowAboutPanel();">❔ About</button>
+      <button class="fullscreen-menu__button" onclick="ShowContactPanel();">✉️ Contact</button>
     </div>
-    <div class="container__years">
-      <button class="panel-button btn-2024" id="btn-2024" onclick="SelectAlbum('2024');">2024</button>
-      <button class="panel-button btn-2023" id="btn-2023" onclick="SelectAlbum('2023');">2023</button>
-        <button class="panel-button btn-2022" id="btn-2022" onclick="SelectAlbum('2022');">2022</button>
-        <button class="panel-button btn-2021" id="btn-2021" onclick="SelectAlbum('2021');">2021</button>
-        <button class="panel-button btn-2019" id="btn-2019" onclick="SelectAlbum('2019');">2019</button>
-        <button class="panel-button btn-2018" id="btn-2018" onclick="SelectAlbum('2018');">2018</button>
+
+  </div>
+  <div class="container__years">
+    <button class="panel-button btn-2024" id="btn-2024" onclick="SelectAlbum('2024');">2024</button>
+    <button class="panel-button btn-2023" id="btn-2023" onclick="SelectAlbum('2023');">2023</button>
+    <button class="panel-button btn-2022" id="btn-2022" onclick="SelectAlbum('2022');">2022</button>
+    <button class="panel-button btn-2021" id="btn-2021" onclick="SelectAlbum('2021');">2021</button>
+    <button class="panel-button btn-2019" id="btn-2019" onclick="SelectAlbum('2019');">2019</button>
+    <button class="panel-button btn-2018" id="btn-2018" onclick="SelectAlbum('2018');">2018</button>
+  </div>
+  <div id="player" class="hidden player-small"></div>
+  <div class="main-content">
+    <h1 class="page-title page-title-outside-main-content">First of October</h1>
+    <div class="main-buttons-container">
+      <h1 class="page-title page-title-inside-main-content">First of October</h1>
+      <button id="button-making-of" class="main-button" onclick="ShowMakingOf();">
+        <p class="main-button-inner-text">🎥 Making of</p>
+      </button>
+
+      <button id="button-special" class="main-button" onclick="ShowSpecial();">
+        <p class="main-button-inner-text">🌟 Special</p>
+      </button>
+      <div class="small-buttons-div small-buttons-div-left">
+
+        <button id="music-player-button" class="main-button" onclick="ShowMusicPlayer();">
+          <p class="main-button-inner-text">▶️ Music Player</p>
+        </button>
       </div>
-      <div id="player" class="hidden player-small"></div>
-    <div class="main-content">
-      <h1 class="page-title page-title-outside-main-content">First of October</h1>
-      <div class="main-buttons-container">
-        <h1 class="page-title page-title-inside-main-content">First of October</h1>
-        <button id="button-making-of" class="main-button" onclick="ShowMakingOf();"><p class="main-button-inner-text">🎥 Making of</p>
+      <div class="small-buttons-div small-buttons-div-right fit-children">
+
+        <button id="extra-button-merch" class="main-button extra-button extra-button-small" onclick="OpenMerchLink();">
+          <p class="extra-button-small-inner-text">💽 Merch</p>
+        </button>
+        <button id="extra-button-zine" class="main-button extra-button extra-button-small"
+          onclick="ShowContactPanel();">
+          <p class="extra-button-small-inner-text">📰 Zine</p>
         </button>
 
-        <button id="button-special" class="main-button" onclick="ShowSpecial();"><p class="main-button-inner-text">🌟 Special</p>
+        <button id="extra-button-contact" class="main-button extra-button extra-button-small"
+          onclick="ShowContactPanel();">
+          <p class="extra-button-small-inner-text">✉️ Contact</p>
         </button>
-
-        <button id="music-player-button" class="main-button" onclick="ShowMusicPlayer();"><p class="main-button-inner-text">▶️ Music Player</p>
+        <button id="about-button" class="main-button extra-button extra-button-small" onclick="ShowAboutPanel();">
+          <p class="extra-button-small-inner-text">❔ About</p>
         </button>
-
-        <button id="about-button" class="main-button" onclick="ShowAboutPanel();"><p class="main-button-inner-text">❔ About</p>
-        </button>
-
-        <button id="extra-button-merch" class="main-button extra-button extra-button-merch" onclick="OpenMerchLink();">
-          <p class="main-button-inner-text">💽 Merch</p>
-        </button>
-        <button id="extra-button-contact" class="main-button extra-button extra-button-contact" onclick="ShowContactPanel();">
-          <p class="main-button-inner-text">✉️ Contact</p>
-        </button>
-              
       </div>
-      <footer class="footer__regular footer__fixed">Foo Fansite by <a href="http://caiomga.com" target="_blank">Caio
+
+    </div>
+    <footer class="footer__regular footer__fixed">Foo Fansite by <a href="http://caiomga.com" target="_blank">Caio
         Amaral</a></footer>
-    </div>
-    <div id="about-container" class="extra-container hidden">
-      <div class="extra-container-panel">
-        <div class="extra-container-panel-content" onclick="HideAboutPanel();">
-          <h2 class="about-content-title">About</h2>
+  </div>
+  <div id="about-container" class="extra-container hidden">
+    <div class="extra-container-panel">
+      <div class="extra-container-panel-content" onclick="HideAboutPanel();">
+        <h2 class="about-content-title">About</h2>
 
-          <h3 class="about-content-subtitle">About the band</h3>
-          <p class="about-content-text">Every year since 2018 (<i>except 2020 due to Covid restrictions</i>), on October 1st, <span class="strong"><a href="https://www.youtube.com/@andrewhuang" target="_blank">Andrew Huang</a></span> and <span class="strong"><a href="https://www.youtube.com/@robscallon/" target="_blank">Rob Scallon</a></span> try to record an album in one day. They compose, perform and record all songs from said album in a single day. To be more precise, they do all that in 12 hours.</p>
-          <p><i>In 2024 they recorded in November 15th due to Covid issues as well</i></p>
+        <h3 class="about-content-subtitle">About the band</h3>
+        <p class="about-content-text">Every year since 2018 (<i>except 2020 due to Covid restrictions</i>), on October
+          1st, <span class="strong"><a href="https://www.youtube.com/@andrewhuang" target="_blank">Andrew
+              Huang</a></span> and <span class="strong"><a href="https://www.youtube.com/@robscallon/"
+              target="_blank">Rob Scallon</a></span> try to record an album in one day. They compose, perform and record
+          all songs from said album in a single day. To be more precise, they do all that in 12 hours.</p>
+        <p><i>In 2024 they recorded in November 15th due to Covid issues as well</i></p>
 
-          <h3 class="about-content-subtitle">About the site</h3>
-          <p class="about-content-text">Fansite created as a hommage to <span class="strong"></span>First of October</span>.</p>
-          <p class="about-content-text">This site does not use any JavaScript framework. The audio and video shown in the site are from Youtube due to its convenience (it's free, available worldwide, and fast). The site is self-hosted</p>
-          <p class="about-content-text">I decided to create this site because this is the only band I look forward to their next album every year.</p>
+        <h3 class="about-content-subtitle">About the site</h3>
+        <p class="about-content-text">Fansite created as a hommage to <span class="strong"></span>First of
+          October</span>.</p>
+        <p class="about-content-text">This site does not use any JavaScript framework. The audio and video shown in the
+          site are from Youtube due to its convenience (it's free, available worldwide, and fast). The site is
+          self-hosted</p>
+        <p class="about-content-text">I decided to create this site because this is the only band I look forward to
+          their next album every year.</p>
         </br>
 
-        <p class="about-content-text">Andrew Huang on <a href="https://www.youtube.com/@andrewhuang" target="blank_">Youtube</a></p>
-        <p class="about-content-text">Rob Scallon on <a href="https://www.youtube.com/@robscallon/" target="blank_">Youtube</a></p>
-        <p class="about-content-text">Source code is available at <a href="https://github.com/CaioMGA/foo-fansite" target="blank_">Github</a></p>
-        </div>
-
-        <button class="close-button" onclick="HideAboutPanel();">
-          X
-        </button>
+        <p class="about-content-text">Andrew Huang on <a href="https://www.youtube.com/@andrewhuang"
+            target="blank_">Youtube</a></p>
+        <p class="about-content-text">Rob Scallon on <a href="https://www.youtube.com/@robscallon/"
+            target="blank_">Youtube</a></p>
+        <p class="about-content-text">Source code is available at <a href="https://github.com/CaioMGA/foo-fansite"
+            target="blank_">Github</a></p>
       </div>
+
+      <button class="close-button" onclick="HideAboutPanel();">
+        X
+      </button>
     </div>
+  </div>
 
-    <div id="contact-container" class="extra-container hidden">
-      <div class="extra-container-panel">
-        <h2 class="about-content-title">Contact</h2>
+  <div id="contact-container" class="extra-container hidden">
+    <div class="extra-container-panel">
+      <h2 class="about-content-title">Contact</h2>
 
-        <h3 class="about-content-subtitle">Caio Amaral</h3>
-        <a class="about-content-text" href="mailto:caiomga@gmail.com">caiomga@gmail.com</a>
+      <h3 class="about-content-subtitle">Caio Amaral</h3>
+      <a class="about-content-text" href="mailto:caiomga@gmail.com">caiomga@gmail.com</a>
 
-        <button class="close-button" onclick="HideContactPanel();">
-          X
-        </button>
-      </div>
+      <button class="close-button" onclick="HideContactPanel();">
+        X
+      </button>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
