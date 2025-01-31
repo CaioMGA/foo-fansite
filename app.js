@@ -230,6 +230,10 @@ function OpenMerchLink() {
     window.open("https://store.dftba.com/collections/rob-scallon");
 }
 
+function ShowZinesPage(){
+    window.location.href = "./zines.html"
+}
+
 function ShowContactPanel() {
     document.getElementById("contact-container").classList.remove("hidden");
 }

@@ -1,0 +1,129 @@
+:root {
+    --black: #3c2352;
+    --white: #fff;
+    --yellow: #f5c823;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Special Elite";
+    font-weight: 100;
+    color: var(--white);
+    background-color: var(--black);
+}
+html, body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    font-weight: 200;
+    margin-bottom: 0.7rem;
+}
+
+main {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 390px;
+}
+
+.zine-cover {
+    /* margin: 0 2rem 0 0; */
+    object-fit: none;
+    height: auto;
+    /* aspect-ratio: 350 / 500; */
+}
+
+.top-nav {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding-left: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.page-tigle-container {
+    width: 0px;
+    display: inline;
+}
+
+.page-title {
+    display: inline;
+    position: relative;
+    white-space: nowrap;
+    right: 21rem;
+    padding: 0.4rem 1rem;
+    font-size: x-large;
+}
+
+#back-button {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+#back-button:hover {
+    background-color: var(--black);
+    color: var(--yellow);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    max-height: 390px;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.link-list{
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+
+.link-list-link {
+    line-height: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+    
+    body, html {
+        display: block;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 100%;
+
+    }
+
+    main {
+        /* display: block; */
+        max-height: none;
+        /* overflow-y: scroll;
+        overflow-x: hidden; */
+        justify-content: center;
+        padding-bottom: 10rem;
+    }
+
+    .top-nav{
+        border-radius: 0;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        max-height: none;
+        flex-wrap: nowrap;
+        padding-top: 2rem;
+    }
+}
