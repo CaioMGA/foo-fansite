@@ -30,7 +30,7 @@ main {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-height: 390px;
+    /* max-height: 390px; */
 }
 
 .zine-cover {
@@ -96,6 +96,10 @@ main {
     line-height: 1.4rem;
 }
 
+.credit {
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     
     body, html {
@@ -112,7 +116,6 @@ main {
         /* overflow-y: scroll;
         overflow-x: hidden; */
         justify-content: center;
-        padding-bottom: 10rem;
     }
 
     .top-nav{
@@ -125,5 +128,9 @@ main {
         max-height: none;
         flex-wrap: nowrap;
         padding-top: 2rem;
+    }
+
+    .credit{
+        padding-bottom: 10rem;
     }
 }
